@@ -1,0 +1,124 @@
+
+#pentagonContainer{
+  position: absolute;
+  bottom: 0px;
+  left: calc(50% - 305px);
+  bottom: 175px;;
+
+  -webkit-transition:all 2s ease;
+  -moz-transition:all 2s ease;
+  -o-transition: all 2s ease;
+  transition: all 2s ease;
+}
+#pentagon{
+  position: relative;
+  width: 72px;
+  border-width: 60px 19px 0;
+  border-style: solid;
+  border-color: #8300FF transparent;
+  opacity:.4;
+  z-index:99;
+
+  -webkit-transition:all 2s ease;
+  -moz-transition:all 2s ease;
+  -o-transition: all 2s ease;
+  transition: all 2s ease;
+
+  animation: pentagonAnimation 10s infinite;
+  -webkit-animation: pentagonAnimation 10s infinite;
+  -moz-animation: pentagonAnimation 10s infinite;
+  -o-animation: pentagonAnimationn 10s infinite;
+}
+
+#pentagon:before {
+    content: "";
+    position: absolute;
+    height: 0;
+    width: 0;
+    top: -115px;
+    left: -18px;
+    border-width: 0 55px 55px;
+    border-style: solid;
+    border-color: transparent transparent red;
+    z-index:99;
+
+    -webkit-transition:all 2s ease;
+    -moz-transition:all 2s ease;
+    -o-transition: all 2s ease;
+    transition: all 2s ease;
+
+
+    animation: pentagonTopAnimation 10s infinite;
+    -webkit-animation: pentagonTopAnimation 10s infinite;
+    -moz-animation: pentagonTopAnimation 10s infinite;
+    -o-animation: pentagonTopAnimationn 10s infinite;
+  }
+
+
+
+  #pentagon:hover{
+    transform: rotateY(360deg);
+    opacity:1;
+  }
+
+  #pentagon:before:hover{
+    transform:inherit;
+  }
+
+  @keyframes pentagonAnimation{
+
+    0% { border-color: #8300FF transparent;  }
+    10% { border-color: #0030FF transparent;  }
+    20%{ border-color: #000BFF transparent;   }
+    30%  { border-color: #00FFD8 transparent; }
+    40% { border-color: #1EFF00 transparent; }
+    50% { border-color: #FF9000 transparent; }
+    60% { border-color: #FF5D00 transparent; }
+    70% { border-color: red transparent; }
+    80% { border-color: #FF0075 transparent; }
+    90% { border-color: #00FF6B transparent; }
+    100% { border-color: #FF00EF transparent;  }
+  }
+  @-webkit-keyframes pentagonAnimation{
+
+    0% { border-color: #8300FF transparent;  }
+    10% { border-color: #0030FF transparent;  }
+    20%{ border-color: #000BFF transparent;   }
+    30%  { border-color: #00FFD8 transparent; }
+    40% { border-color: #1EFF00 transparent; }
+    50% { border-color: #FF9000 transparent; }
+    60% { border-color: #FF5D00 transparent; }
+    70% { border-color: red transparent; }
+    80% { border-color: #FF0075 transparent; }
+    90% { border-color: #00FF6B transparent; }
+    100% { border-color: #FF00EF transparent;  }
+  }
+
+  @keyframes pentagonTopAnimation{
+
+    0% { border-color:transparent transparent #8300FF;  }
+    10% { border-color:transparent transparent #0030FF;  }
+    20%{ border-color:transparent transparent #000BFF;   }
+    30%  { border-color:transparent transparent #00FFD8; }
+    40% { border-color:transparent transparent #1EFF00; }
+    50% { border-color:transparent transparent #FF9000; }
+    60% { border-color:transparent transparent #FF5D00; }
+    70% { border-color:transparent transparent red; }
+    80% { border-color:transparent transparent #FF0075; }
+    90% { border-color:transparent transparent #00FF6B; }
+    100% { border-color:transparent transparent #FF00EF;  }
+  }
+  @-webkit-keyframes pentagonTopAnimation{
+
+    0% { border-color:transparent transparent #8300FF;  }
+    10% { border-color:transparent transparent #0030FF;  }
+    20%{ border-color:transparent transparent #000BFF;   }
+    30%  { border-color:transparent transparent #00FFD8; }
+    40% { border-color:transparent transparent #1EFF00; }
+    50% { border-color:transparent transparent #FF9000; }
+    60% { border-color:transparent transparent #FF5D00; }
+    70% { border-color:transparent transparent red; }
+    80% { border-color:transparent transparent #FF0075; }
+    90% { border-color:transparent transparent #00FF6B; }
+    100% { border-color:transparent transparent #FF00EF;  }
+  }

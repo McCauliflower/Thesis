@@ -1,0 +1,422 @@
+#hexagonContainer {
+    position: absolute;
+    bottom: 0px;
+    right: calc(50% - 275px);
+    bottom: 200px;
+
+
+    -webkit-transition: all 2s ease;
+    -moz-transition: all 2s ease;
+    -o-transition: all 2s ease;
+    transition: all 2s ease;
+}
+
+#hexagon {
+    width: 100px;
+    height: 55px;
+    background: red;
+    position: relative;
+    opacity: .4;
+    z-index:99;
+
+
+    -webkit-transition: all 2s ease;
+    -moz-transition: all 2s ease;
+    -o-transition: all 2s ease;
+    transition: all 2s ease;
+
+    animation: hexagonAnimation 10s infinite;
+    -webkit-animation: hexagonAnimation 10s infinite;
+    -moz-animation: hexagonAnimation 10s infinite;
+    -o-animation: hexagonAnimationn 10s infinite;
+}
+
+#hexagon:before {
+    content: "";
+    position: absolute;
+    top: -25px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 25px solid red;
+    z-index:99;
+
+
+    -webkit-transition: all 2s ease;
+    -moz-transition: all 2s ease;
+    -o-transition: all 2s ease;
+    transition: all 2s ease;
+
+    animation: hexagonBottomAnimation 10s infinite;
+    -webkit-animation: hexagonBottomAnimation 10s infinite;
+    -moz-animation: hexagonBottomAnimation 10s infinite;
+    -o-animation: hexagonBottomAnimation 10s infinite;
+}
+
+#hexagon:after {
+    content: "";
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 25px solid red;
+    -webkit-transition: all 2s ease;
+    -moz-transition: all 2s ease;
+    -o-transition: all 2s ease;
+    transition: all 2s ease;
+    z-index:99;
+
+
+    animation: hexagonTopAnimation 10s infinite;
+    -webkit-animation: hexagonTopAnimation 10s infinite;
+    -moz-animation: hexagonTopAnimation 10s infinite;
+    -o-animation: hexagonTopAnimationn 10s infinite;
+}
+
+#hexagon:hover {
+    transform: rotateY(360deg);
+    opacity: 1;
+}
+
+#hexagon:before:hover {
+
+    transform: rotateY(360deg);
+    transform: inherit;
+    opacity: 1;
+}
+
+#hexagon:after:hover {
+    transform: rotateY(360deg);
+    transform: inherit;
+    opacity: 1;
+}
+
+@keyframes hexagonAnimation {
+    0% {
+        background: #8300FF;
+    }
+    10% {
+        background: #0030FF;
+    }
+    20% {
+        background: #000BFF;
+    }
+    30% {
+        background: #00FFD8;
+    }
+    40% {
+        background: #1EFF00;
+    }
+    50% {
+        background: #FF9000;
+    }
+    60% {
+        background: #FF5D00;
+    }
+    70% {
+        background: red;
+    }
+    80% {
+        background: #FF0075;
+    }
+    90% {
+        background: #00FF6B;
+    }
+    100% {
+        background: #FF00EF;
+    }
+}
+
+@-webkit-keyframes hexagonAnimation {
+    0% {
+        background: #8300FF;
+    }
+    10% {
+        background: #0030FF;
+    }
+    20% {
+        background: #000BFF;
+    }
+    30% {
+        background: #00FFD8;
+    }
+    40% {
+        background: #1EFF00;
+    }
+    50% {
+        background: #FF9000;
+    }
+    60% {
+        background: #FF5D00;
+    }
+    70% {
+        background: red;
+    }
+    80% {
+        background: #FF0075;
+    }
+    90% {
+        background: #00FF6B;
+    }
+    100% {
+        background: #FF00EF;
+    }
+}
+
+@-moz-keyframes hexagonAnimation {
+    0% {
+        background: #8300FF;
+    }
+    10% {
+        background: #0030FF;
+    }
+    20% {
+        background: #000BFF;
+    }
+    30% {
+        background: #00FFD8;
+    }
+    40% {
+        background: #1EFF00;
+    }
+    50% {
+        background: #FF9000;
+    }
+    60% {
+        background: #FF5D00;
+    }
+    70% {
+        background: red;
+    }
+    80% {
+        background: #FF0075;
+    }
+    90% {
+        background: #00FF6B;
+    }
+    100% {
+        background: #FF00EF;
+    }
+}
+
+@keyframes hexagonTopAnimation {
+    0% {
+        border-top: 25px solid #8300FF;
+    }
+    10% {
+        border-top: 25px solid #0030FF;
+    }
+    20% {
+        border-top: 25px solid #000BFF;
+    }
+    30% {
+        border-top:25px solid #00FFD8;
+    }
+    40% {
+        border-top:25px solid #1EFF00;
+    }
+    50% {
+        border-top:25px solid #FF9000;
+    }
+    60% {
+        border-top:25px solid #FF5D00;
+    }
+    70% {
+        border-top:25px solid red;
+    }
+    80% {
+        border-top:25px solid #FF0075;
+    }
+    90% {
+        border-top:25px solid #00FF6B;
+    }
+    100% {
+        border-top:25px solid #FF00EF;
+    }
+}
+
+@-webkit-keyframes hexagonTopAnimation {
+  0% {
+      border-top: 25px solid #8300FF;
+  }
+  10% {
+      border-top: 25px solid #0030FF;
+  }
+  20% {
+      border-top: 25px solid #000BFF;
+  }
+  30% {
+      border-top:25px solid #00FFD8;
+  }
+  40% {
+      border-top:25px solid #1EFF00;
+  }
+  50% {
+      border-top:25px solid #FF9000;
+  }
+  60% {
+      border-top:25px solid #FF5D00;
+  }
+  70% {
+      border-top:25px solid red;
+  }
+  80% {
+      border-top:25px solid #FF0075;
+  }
+  90% {
+      border-top:25px solid #00FF6B;
+  }
+  100% {
+      border-top:25px solid #FF00EF;
+  }
+}
+
+
+@-moz-keyframes hexagonTopAnimation {
+  0% {
+      border-top: 25px solid #8300FF;
+  }
+  10% {
+      border-top: 25px solid #0030FF;
+  }
+  20% {
+      border-top: 25px solid #000BFF;
+  }
+  30% {
+      border-top:25px solid #00FFD8;
+  }
+  40% {
+      border-top:25px solid #1EFF00;
+  }
+  50% {
+      border-top:25px solid #FF9000;
+  }
+  60% {
+      border-top:25px solid #FF5D00;
+  }
+  70% {
+      border-top:25px solid red;
+  }
+  80% {
+      border-top:25px solid #FF0075;
+  }
+  90% {
+      border-top:25px solid #00FF6B;
+  }
+  100% {
+      border-top:25px solid #FF00EF;
+  }
+}
+
+@keyframes hexagonBottomAnimation {
+    0% {
+        border-bottom:25px solid #8300FF;
+    }
+    10% {
+        border-bottom:25px solid #0030FF;
+    }
+    20% {
+        border-bottom:25px solid #000BFF;
+    }
+    30% {
+        border-bottom:25px solid #00FFD8;
+    }
+    40% {
+        border-bottom:25px solid #1EFF00;
+    }
+    50% {
+        border-bottom:25px solid #FF9000;
+    }
+    60% {
+        border-bottom:25px solid #FF5D00;
+    }
+    70% {
+        border-bottom:25px solid red;
+    }
+    80% {
+        border-bottom:25px solid #FF0075;
+    }
+    90% {
+        border-bottom:25px solid #00FF6B;
+    }
+    100% {
+        border-bottom:25px solid  #FF00EF;
+    }
+}
+
+
+@-moz-keyframes hexagonBottomAnimation {
+  0% {
+      border-bottom:25px solid #8300FF;
+  }
+  10% {
+      border-bottom:25px solid #0030FF;
+  }
+  20% {
+      border-bottom:25px solid #000BFF;
+  }
+  30% {
+      border-bottom:25px solid #00FFD8;
+  }
+  40% {
+      border-bottom:25px solid #1EFF00;
+  }
+  50% {
+      border-bottom:25px solid #FF9000;
+  }
+  60% {
+      border-bottom:25px solid #FF5D00;
+  }
+  70% {
+      border-bottom:25px solid red;
+  }
+  80% {
+      border-bottom:25px solid #FF0075;
+  }
+  90% {
+      border-bottom:25px solid #00FF6B;
+  }
+  100% {
+      border-bottom:25px solid  #FF00EF;
+  }
+}
+@-webkit-keyframes hexagonBottomAnimation {
+  0% {
+      border-bottom:25px solid #8300FF;
+  }
+  10% {
+      border-bottom:25px solid #0030FF;
+  }
+  20% {
+      border-bottom:25px solid #000BFF;
+  }
+  30% {
+      border-bottom:25px solid #00FFD8;
+  }
+  40% {
+      border-bottom:25px solid #1EFF00;
+  }
+  50% {
+      border-bottom:25px solid #FF9000;
+  }
+  60% {
+      border-bottom:25px solid #FF5D00;
+  }
+  70% {
+      border-bottom:25px solid red;
+  }
+  80% {
+      border-bottom:25px solid #FF0075;
+  }
+  90% {
+      border-bottom:25px solid #00FF6B;
+  }
+  100% {
+      border-bottom:25px solid  #FF00EF;
+  }
+}

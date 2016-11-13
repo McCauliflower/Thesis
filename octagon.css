@@ -1,0 +1,230 @@
+
+#octagonContainer{
+  opacity:.4;
+  position:absolute;
+  right:calc(50% - 335px);
+  bottom:310px;
+  z-index:99;
+  background:transparent;
+}
+#octagon {
+width: 100px;
+height: 100px;
+background: gray;
+position: relative;
+
+-webkit-transition: all 2s ease;
+-moz-transition: all 2s ease;
+-o-transition: all 2s ease;
+transition: all 2s ease;
+
+animation: octagonAnimation 10s infinite;
+-webkit-animation: octagonAnimation 10s infinite;
+-moz-animation: octagonAnimation 10s infinite;
+-o-animation: octagonAnimation 10s infinite;
+}
+
+#octagon:before {
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+border-bottom: 29px solid gray;
+border-left: 29px solid #545864!important;
+border-right: 29px solid #545864 !important;;
+width: 42px;
+height: 0;
+
+-webkit-transition: all 2s ease;
+-moz-transition: all 2s ease;
+-o-transition: all 2s ease;
+transition: all 2s ease;
+
+animation: octagonTopAnimation 10s infinite;
+-webkit-animation: octagonTopAnimation 10s infinite;
+-moz-animation: octagonTopAnimation 10s infinite;
+-o-animation: octagonTopAnimation 10s infinite;
+}
+
+#octagon:after {
+content: "";
+position: absolute;
+bottom: 0;
+left: 0;
+border-top: 29px solid gray;
+border-left: 29px solid #545864!important;
+border-right: 29px solid #545864 !important;
+width: 42px;
+height: 0;
+
+-webkit-transition: all 2s ease;
+-moz-transition: all 2s ease;
+-o-transition: all 2s ease;
+transition: all 2s ease;
+
+animation: octagonBottomAnimation 10s infinite;
+-webkit-animation: octagonBottomAnimation 10s infinite;
+-moz-animation: octagonBottomAnimation 10s infinite;
+-o-animation: octagonBottomAnimation 10s infinite;
+}
+
+
+
+#octagon:hover {
+    transform: rotateY(360deg);
+    opacity: 1;
+}
+
+#octagon:before:hover {
+    transform: inherit;
+    opacity: 1;
+}
+
+#octagon:after:hover {
+    transform: inherit;
+    opacity: 1;
+}
+
+
+
+@keyframes octagonAnimation{
+
+  0% { background-color: #FF5D00; }
+  10% { background-color: red; }
+  20% { background-color: #FF0075; }
+  30% { background-color: #00FF6B; }
+  40% { background-color: #FF00EF;  }
+  50% { background-color: #8300FF;  }
+  60% { background-color: #0030FF;  }
+  70%{ background-color: #000BFF;   }
+  80%  { background-color: #00FFD8; }
+  90% { background-color: #1EFF00; }
+  100% { background-color: #FF9000; }
+}
+
+@-webkit-keyframes octagonAnimation{
+
+  0% { background-color: #FF5D00; }
+  10% { background-color: red; }
+  20% { background-color: #FF0075; }
+  30% { background-color: #00FF6B; }
+  40% { background-color: #FF00EF;  }
+  50% { background-color: #8300FF;  }
+  60% { background-color: #0030FF;  }
+  70%{ background-color: #000BFF;   }
+  80%  { background-color: #00FFD8; }
+  90% { background-color: #1EFF00; }
+  100% { background-color: #FF9000; }
+}
+
+@-moz-keyframes octagonAnimation{
+  0% { background-color: #FF5D00; }
+  10% { background-color: red; }
+  20% { background-color: #FF0075; }
+  30% { background-color: #00FF6B; }
+  40% { background-color: #FF00EF;  }
+  50% { background-color: #8300FF;  }
+  60% { background-color: #0030FF;  }
+  70%{ background-color: #000BFF;   }
+  80%  { background-color: #00FFD8; }
+  90% { background-color: #1EFF00; }
+  100% { background-color: #FF9000; }
+
+}
+
+
+@keyframes octagonTopAnimation{
+
+  0% { border-bottom: 29px solid #FF5D00;border-left:29px solid black;border-right:29px solid black; }
+  10% { border-bottom: 29px solid red;border-left:29px solid black;border-right:29px solid black; }
+  20% { border-bottom:29px solid #FF0075;border-left:29px solid black;border-right:29px solid black; }
+  30% { border-bottom:29px solid  #00FF6B;border-left:29px solid black;border-right:29px solid black; }
+  40% { border-bottom:29px solid  #FF00EF;border-left:29px solid black;border-right:29px solid black; }
+  50% { border-bottom: 29px solid #8300FF;border-left:29px solid black;border-right:29px solid black; }
+  60% { border-bottom:29px solid  #0030FF;border-left:29px solid black;border-right:29px solid black; }
+  70%{ border-bottom: 29px solid #000BFF;border-left:29px solid black;border-right:29px solid black; }
+  80%  { border-bottom:29px solid  #00FFD8;border-left:29px solid black;border-right:29px solid black; }
+  90% { border-bottom:29px solid  #1EFF00;border-left:29px solid black;border-right:29px solid black; }
+  100% { border-bottom:29px solid  #FF9000;border-left:29px solid black;border-right:29px solid black; }
+
+}
+
+
+@-webkit-keyframes octagonTopAnimation{
+
+  0% { border-bottom: 29px solid #FF5D00;border-left:29px solid black;border-right:29px solid black; }
+  10% { border-bottom: 29px solid red;border-left:29px solid black;border-right:29px solid black; }
+  20% { border-bottom:29px solid #FF0075;border-left:29px solid black;border-right:29px solid black; }
+  30% { border-bottom:29px solid  #00FF6B;border-left:29px solid black;border-right:29px solid black; }
+  40% { border-bottom:29px solid  #FF00EF;border-left:29px solid black;border-right:29px solid black; }
+  50% { border-bottom: 29px solid #8300FF;border-left:29px solid black;border-right:29px solid black; }
+  60% { border-bottom:29px solid  #0030FF;border-left:29px solid black;border-right:29px solid black; }
+  70%{ border-bottom: 29px solid #000BFF;border-left:29px solid black;border-right:29px solid black; }
+  80%  { border-bottom:29px solid  #00FFD8;border-left:29px solid black;border-right:29px solid black; }
+  90% { border-bottom:29px solid  #1EFF00;border-left:29px solid black;border-right:29px solid black; }
+  100% { border-bottom:29px solid  #FF9000;border-left:29px solid black;border-right:29px solid black; }
+
+}
+
+
+@-moz-keyframes octagonTopAnimation{
+  0% { border-bottom: 29px solid #FF5D00;border-left:29px solid black;border-right:29px solid black; }
+  10% { border-bottom: 29px solid red;border-left:29px solid black;border-right:29px solid black; }
+  20% { border-bottom:29px solid #FF0075;border-left:29px solid black;border-right:29px solid black; }
+  30% { border-bottom:29px solid  #00FF6B;border-left:29px solid black;border-right:29px solid black; }
+  40% { border-bottom:29px solid  #FF00EF;border-left:29px solid black;border-right:29px solid black; }
+  50% { border-bottom: 29px solid #8300FF;border-left:29px solid black;border-right:29px solid black; }
+  60% { border-bottom:29px solid  #0030FF;border-left:29px solid black;border-right:29px solid black; }
+  70%{ border-bottom: 29px solid #000BFF;border-left:29px solid black;border-right:29px solid black; }
+  80%  { border-bottom:29px solid  #00FFD8;border-left:29px solid black;border-right:29px solid black; }
+  90% { border-bottom:29px solid  #1EFF00;border-left:29px solid black;border-right:29px solid black; }
+  100% { border-bottom:29px solid  #FF9000;border-left:29px solid black;border-right:29px solid black; }
+
+}
+
+@keyframes octagonBottomAnimation{
+
+  0% { border-top: 29px solid #FF5D00;border-left:29px solid black;border-right:29px solid black; }
+  10% { border-top: 29px solid red;border-left:29px solid black;border-right:29px solid black; }
+  20% { border-top: 29px solid #FF0075;border-left:29px solid black;border-right:29px solid black; }
+  30% { border-top:29px solid  #00FF6B;border-left:29px solid black;border-right:29px solid black; }
+  40% { border-top:29px solid  #FF00EF;border-left:29px solid black;border-right:29px solid black; }
+  50% { border-top: 29px solid #8300FF;border-left:29px solid black;border-right:29px solid black; }
+  60% { border-top:29px solid  #0030FF;border-left:29px solid black;border-right:29px solid black; }
+  70%{ border-top: 29px solid #000BFF;border-left:29px solid black;border-right:29px solid black; }
+  80%  { border-top:29px solid  #00FFD8;border-left:29px solid black;border-right:29px solid black; }
+  90% { border-top:29px solid  #1EFF00;border-left:29px solid black;border-right:29px solid black; }
+  100% { border-top:29px solid  #FF9000;border-left:29px solid black;border-right:29px solid black; }
+
+}
+
+@-webkit-keyframes octagonBottomAnimation{
+  0% { border-top: 29px solid #FF5D00;border-left:29px solid black;border-right:29px solid black; }
+  10% { border-top: 29px solid red;border-left:29px solid black;border-right:29px solid black; }
+  20% { border-top: 29px solid #FF0075;border-left:29px solid black;border-right:29px solid black; }
+  30% { border-top:29px solid  #00FF6B;border-left:29px solid black;border-right:29px solid black; }
+  40% { border-top:29px solid  #FF00EF;border-left:29px solid black;border-right:29px solid black; }
+  50% { border-top: 29px solid #8300FF;border-left:29px solid black;border-right:29px solid black; }
+  60% { border-top:29px solid  #0030FF;border-left:29px solid black;border-right:29px solid black; }
+  70%{ border-top: 29px solid #000BFF;border-left:29px solid black;border-right:29px solid black; }
+  80%  { border-top:29px solid  #00FFD8;border-left:29px solid black;border-right:29px solid black; }
+  90% { border-top:29px solid  #1EFF00;border-left:29px solid black;border-right:29px solid black; }
+  100% { border-top:29px solid  #FF9000;border-left:29px solid black;border-right:29px solid black; }
+
+}
+
+
+@-moz-keyframes octagonBottomAnimation{
+  0% { border-top: 29px solid #FF5D00;border-left:29px solid black;border-right:29px solid black; }
+  10% { border-top: 29px solid red;border-left:29px solid black;border-right:29px solid black; }
+  20% { border-top: 29px solid #FF0075;border-left:29px solid black;border-right:29px solid black; }
+  30% { border-top:29px solid  #00FF6B;border-left:29px solid black;border-right:29px solid black; }
+  40% { border-top:29px solid  #FF00EF;border-left:29px solid black;border-right:29px solid black; }
+  50% { border-top: 29px solid #8300FF;border-left:29px solid black;border-right:29px solid black; }
+  60% { border-top:29px solid  #0030FF;border-left:29px solid black;border-right:29px solid black; }
+  70%{ border-top: 29px solid #000BFF;border-left:29px solid black;border-right:29px solid black; }
+  80%  { border-top:29px solid  #00FFD8;border-left:29px solid black;border-right:29px solid black; }
+  90% { border-top:29px solid  #1EFF00;border-left:29px solid black;border-right:29px solid black; }
+  100% { border-top:29px solid  #FF9000;border-left:29px solid black;border-right:29px solid black; }
+
+}

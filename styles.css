@@ -1,0 +1,198 @@
+
+
+
+#box2{
+  opacity:.4;
+  position:absolute;
+  right:calc(50% - 300px);
+  bottom:500px;
+  height:0px;
+  width:0px;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid red;
+    z-index:99;
+
+    -webkit-transition:all 2s ease;
+    -moz-transition:all 2s ease;
+    -o-transition: all 2s ease;
+    transition: all 2s ease;
+
+    animation: thirdRowAnimation 10s infinite;
+    -webkit-animation: thirdRowAnimation 10s infinite;
+    -moz-animation: thirdRowAnimation 10s infinite;
+    -o-animation: thirdRowAnimationn 10s infinite;
+}
+
+#box3{
+  opacity:.4;
+  border-radius:50%;
+  position:absolute;
+  left:calc(50% - 375px);
+  bottom:350px;
+  background-color:green;
+  height:100px;
+  width:100px;
+  z-index:99;
+
+  -webkit-transition:all 2s ease;
+  -moz-transition:all 2s ease;
+  -o-transition: all 2s ease;
+  transition: all 2s ease;
+
+  animation: secondRowAnimation 10s infinite;
+  -webkit-animation: secondRowAnimation 10s infinite;
+  -moz-animation: secondRowAnimation 10s infinite;
+  -o-animation: secondRowAnimation 10s infinite;
+}
+
+
+/*
+#box6{
+  opacity:.4;
+  position:absolute;
+  right: calc(50% - 325px);
+  bottom:200px;
+  background-color:blue;
+  height:100px;
+  width:100px;
+  z-index:99;
+
+
+  -webkit-transition:all 2s ease;
+  -moz-transition:all 2s ease;
+  -o-transition: all 2s ease;
+  transition: all 2s ease;
+
+  animation: firstRowAnimation 10s infinite;
+  -webkit-animation: firstRowAnimation 10s infinite;
+  -moz-animation: firstRowAnimation 10s infinite;
+  -o-animation: firstRowAnimation 10s infinite;
+}
+*/
+
+
+#box2:hover{
+  transform: rotateY(360deg);
+
+  opacity:1;
+  border-bottom: 100px solid yellow;
+}
+#box3:hover{
+  transform: rotateY(360deg);
+  opacity:1;
+  background-color:purple;
+
+
+}
+
+
+
+@keyframes thirdRowAnimation{
+
+  0%  { border-bottom: 100px solid #00FFD8; }
+  10% { border-bottom: 100px solid #1EFF00; }
+  20% { border-bottom: 100px solid #FF9000; }
+  30% { border-bottom: 100px solid #FF5D00; }
+  40% { border-bottom: 100px solid red; }
+  50% { border-bottom: 100px solid #FF0075; }
+  60% { border-bottom: 100px solid #00FF6B; }
+  70% { border-bottom: 100px solid #FF00EF;  }
+  80% { border-bottom: 100px solid #8300FF;  }
+  90% { border-bottom: 100px solid #0030FF;  }
+  100%{ border-bottom: 100px solid #000BFF;   }
+}
+
+
+
+@keyframes secondRowAnimation{
+
+  0% { background-color: #FF5D00; }
+  10% { background-color: red; }
+  20% { background-color: #FF0075; }
+  30% { background-color: #00FF6B; }
+  40% { background-color: #FF00EF;  }
+  50% { background-color: #8300FF;  }
+  60% { background-color: #0030FF;  }
+  70%{ background-color: #000BFF;   }
+  80%  { background-color: #00FFD8; }
+  90% { background-color: #1EFF00; }
+  100% { background-color: #FF9000; }
+
+
+}
+
+@-webkit-keyframes secondRowAnimation{
+
+  0% { background-color: #FF5D00; }
+  10% { background-color: red; }
+  20% { background-color: #FF0075; }
+  30% { background-color: #00FF6B; }
+  40% { background-color: #FF00EF;  }
+  50% { background-color: #8300FF;  }
+  60% { background-color: #0030FF;  }
+  70%{ background-color: #000BFF;   }
+  80%  { background-color: #00FFD8; }
+  90% { background-color: #1EFF00; }
+  100% { background-color: #FF9000; }
+
+}
+
+@-moz-keyframes secondRowAnimation{
+  0% { background-color: #FF5D00; }
+  10% { background-color: red; }
+  20% { background-color: #FF0075; }
+  30% { background-color: #00FF6B; }
+  40% { background-color: #FF00EF;  }
+  50% { background-color: #8300FF;  }
+  60% { background-color: #0030FF;  }
+  70%{ background-color: #000BFF;   }
+  80%  { background-color: #00FFD8; }
+  90% { background-color: #1EFF00; }
+  100% { background-color: #FF9000; }
+
+}
+
+
+@keyframes firstRowAnimation{
+
+  0% { background-color: #8300FF;  }
+  10% { background-color: #0030FF;  }
+  20%{ background-color: #000BFF;   }
+  30%  { background-color: #00FFD8; }
+  40% { background-color: #1EFF00; }
+  50% { background-color: #FF9000; }
+  60% { background-color: #FF5D00; }
+  70% { background-color: red; }
+  80% { background-color: #FF0075; }
+  90% { background-color: #00FF6B; }
+  100% { background-color: #FF00EF;  }
+}
+@-webkit-keyframes firstRowAnimation{
+
+  0% { background-color: #8300FF;  }
+  10% { background-color: #0030FF;  }
+  20%{ background-color: #000BFF;   }
+  30%  { background-color: #00FFD8; }
+  40% { background-color: #1EFF00; }
+  50% { background-color: #FF9000; }
+  60% { background-color: #FF5D00; }
+  70% { background-color: red; }
+  80% { background-color: #FF0075; }
+  90% { background-color: #00FF6B; }
+  100% { background-color: #FF00EF;  }
+}
+@-moz-keyframes firstRowAnimation{
+
+  0% { background-color: #8300FF;  }
+  10% { background-color: #0030FF;  }
+  20%{ background-color: #000BFF;   }
+  30%  { background-color: #00FFD8; }
+  40% { background-color: #1EFF00; }
+  50% { background-color: #FF9000; }
+  60% { background-color: #FF5D00; }
+  70% { background-color: red; }
+  80% { background-color: #FF0075; }
+  90% { background-color: #00FF6B; }
+  100% { background-color: #FF00EF;  }
+}
