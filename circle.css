@@ -18,7 +18,7 @@
   animation: rotation 10s infinite,
                 circleAnimation 10s infinite;
   -webkit-animation:rotation 10s infinite,
-                  circleRowAnimation 10s infinite;
+                  circleAnimation 10s infinite;
   -moz-animation: rotation 10s infinite,
                 circleAnimation 10s infinite;
 
@@ -171,48 +171,51 @@
 
 @keyframes circleAnimation{
 
-  0% { background-color: #FF5D00; }
-  10% { background-color: red; }
-  20% { background-color: #FF0075; }
-  30% { background-color: #00FF6B; }
-  40% { background-color: #FF00EF;  }
-  50% { background-color: #8300FF;  }
-  60% { background-color: #0030FF;  }
-  70%{ background-color: #000BFF;   }
-  80%  { background-color: #00FFD8; }
-  90% { background-color: #1EFF00; }
-  100% { background-color: #FF9000; }
+
+  0% { background-color: #00FFD8; }
+  10% { background-color: #1EFF00; }
+  20% { background-color: #FF9000; }
+  30% { background-color:#FF5D00; }
+  40% { background-color: red;  }
+  50% { background-color: #FF0075;  }
+  60% { background-color: #00FF6B;  }
+  70%{ background-color: #FF00EF;   }
+  80%  { background-color: #8300FF; }
+  90% { background-color: #0030FF; }
+  100% { background-color: #000BFF; }
 
 
 }
 
 @-webkit-keyframes circleAnimation{
 
-  0% { background-color: #FF5D00; }
-  10% { background-color: red; }
-  20% { background-color: #FF0075; }
-  30% { background-color: #00FF6B; }
-  40% { background-color: #FF00EF;  }
-  50% { background-color: #8300FF;  }
-  60% { background-color: #0030FF;  }
-  70%{ background-color: #000BFF;   }
-  80%  { background-color: #00FFD8; }
-  90% { background-color: #1EFF00; }
-  100% { background-color: #FF9000; }
+  0% { background-color: #00FFD8; }
+  10% { background-color: #1EFF00; }
+  20% { background-color: #FF9000; }
+  30% { background-color:#FF5D00; }
+  40% { background-color: red;  }
+  50% { background-color: #FF0075;  }
+  60% { background-color: #00FF6B;  }
+  70%{ background-color: #FF00EF;   }
+  80%  { background-color: #8300FF; }
+  90% { background-color: #0030FF; }
+  100% { background-color: #000BFF; }
+
 
 }
 
 @-moz-keyframes circleAnimation{
-  0% { background-color: #FF5D00; }
-  10% { background-color: red; }
-  20% { background-color: #FF0075; }
-  30% { background-color: #00FF6B; }
-  40% { background-color: #FF00EF;  }
-  50% { background-color: #8300FF;  }
-  60% { background-color: #0030FF;  }
-  70%{ background-color: #000BFF;   }
-  80%  { background-color: #00FFD8; }
-  90% { background-color: #1EFF00; }
-  100% { background-color: #FF9000; }
+  0% { background-color: #00FFD8; }
+  10% { background-color: #1EFF00; }
+  20% { background-color: #FF9000; }
+  30% { background-color:#FF5D00; }
+  40% { background-color: red;  }
+  50% { background-color: #FF0075;  }
+  60% { background-color: #00FF6B;  }
+  70%{ background-color: #FF00EF;   }
+  80%  { background-color: #8300FF; }
+  90% { background-color: #0030FF; }
+  100% { background-color: #000BFF; }
+
 
 }
