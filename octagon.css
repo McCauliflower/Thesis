@@ -18,10 +18,14 @@ position: relative;
 -o-transition: all 2s ease;
 transition: all 2s ease;
 
-animation: octagonAnimation 10s infinite;
--webkit-animation: octagonAnimation 10s infinite;
--moz-animation: octagonAnimation 10s infinite;
--o-animation: octagonAnimation 10s infinite;
+animation: rotation 10s infinite,
+            octagonAnimation 10s infinite;
+-webkit-animation: rotation 10s infinite,
+                  octagonAnimation 10s infinite;
+-moz-animation:rotation 10s infinite,
+                octagonAnimation 10s infinite;
+-o-animation:rotation 10s infinite,
+              octagonAnimationn 10s infinite;
 }
 
 #octagon:before {
@@ -39,6 +43,10 @@ height: 0;
 -moz-transition: all 2s ease;
 -o-transition: all 2s ease;
 transition: all 2s ease;
+
+inerhit:animation;
+inherit:-webkit-animation;
+inherit:-moz-animation;
 
 animation: octagonTopAnimation 10s infinite;
 -webkit-animation: octagonTopAnimation 10s infinite;
@@ -62,6 +70,10 @@ height: 0;
 -o-transition: all 2s ease;
 transition: all 2s ease;
 
+inerhit:animation;
+inherit:-webkit-animation;
+inherit:-moz-animation
+
 animation: octagonBottomAnimation 10s infinite;
 -webkit-animation: octagonBottomAnimation 10s infinite;
 -moz-animation: octagonBottomAnimation 10s infinite;
@@ -71,17 +83,65 @@ animation: octagonBottomAnimation 10s infinite;
 
 
 #octagon:hover {
-    transform: rotateY(360deg);
+  animation: rotationHover 1s infinite,
+  octagonAnimation 10s infinite;
+
+  -webkit-animation: rotationHover 1s infinite,
+  octagonAnimation 10s infinite;
+
+  -moz-animation: rotationHover 1s infinite,
+  octagonAnimation 10s infinite;
+
+  -o-animation: rotationHover 1s infinite,
+  octagonAnimation 10s infinite;
+
+
+    /*use this for chrome*/
+    -webkit-transform:rotate3d(1,1,1,360deg) !important;
+
+
     opacity: 1;
 }
 
 #octagon:before:hover {
-    transform: inherit;
+  animation: rotationHover 1s infinite,
+  octagonTopAnimation 10s infinite;
+
+  -webkit-animation: rotationHover 1s infinite,
+  octagonTopAnimation 10s infinite;
+
+  -moz-animation: rotationHover 1s infinite,
+  octagonTopAnimation 10s infinite;
+
+  -o-animation: rotationHover 1s infinite,
+  octagonTopAnimation 10s infinite;
+
+
+    /*use this for chrome, only works in one browser at a time due to bugs (and has to be written differently for each)*/
+    -webkit-transform:rotate3d(1,1,1,360deg) !important;
+
+
+
     opacity: 1;
 }
 
 #octagon:after:hover {
-    transform: inherit;
+  animation: rotationHover 1s infinite,
+  octagonBottomAnimation 10s infinite;
+
+  -webkit-animation: rotationHover 1s infinite,
+  octagonBottomAnimation 10s infinite;
+
+  -moz-animation: rotationHover 1s infinite,
+  octagonBottomAnimation 10s infinite;
+
+  -o-animation: rotationHover 1s infinite,
+  octagonBottomAnimation 10s infinite;
+
+  /*use this for chrome, only works in one browser at a time due to bugs (and has to be written differently for each)*/
+  -webkit-transform:rotateY(360deg) !important;
+
+
     opacity: 1;
 }
 

@@ -25,10 +25,14 @@
     -o-transition: all 2s ease;
     transition: all 2s ease;
 
-    animation: hexagonAnimation 10s infinite;
-    -webkit-animation: hexagonAnimation 10s infinite;
-    -moz-animation: hexagonAnimation 10s infinite;
-    -o-animation: hexagonAnimationn 10s infinite;
+    animation: rotation 10s infinite,
+                hexagonAnimation 10s infinite;
+    -webkit-animation: rotation 10s infinite,
+                      hexagonAnimation 10s infinite;
+    -moz-animation:rotation 10s infinite,
+                    hexagonAnimation 10s infinite;
+    -o-animation:rotation 10s infinite,
+                  hexagonAnimationn 10s infinite;
 }
 
 #hexagon:before {
@@ -49,10 +53,14 @@
     -o-transition: all 2s ease;
     transition: all 2s ease;
 
-    animation: hexagonBottomAnimation 10s infinite;
-    -webkit-animation: hexagonBottomAnimation 10s infinite;
-    -moz-animation: hexagonBottomAnimation 10s infinite;
-    -o-animation: hexagonBottomAnimation 10s infinite;
+    inerhit:animation;
+    inherit:-webkit-animation;
+    inherit:-moz-animation;
+
+    animation:hexagonBottomAnimation 10s infinite !important;
+    -webkit-animation:hexagonBottomAnimation 10s infinite !important;
+    -moz-animation: hexagonBottomAnimation 10s infinite !important;
+    -o-animation:hexagonBottomAnimation 10s infinite !important;
 }
 
 #hexagon:after {
@@ -71,29 +79,85 @@
     transition: all 2s ease;
     z-index:99;
 
+    inerhit:animation;
+    inherit:-webkit-animation;
+    inherit:-moz-animation;
 
-    animation: hexagonTopAnimation 10s infinite;
-    -webkit-animation: hexagonTopAnimation 10s infinite;
-    -moz-animation: hexagonTopAnimation 10s infinite;
-    -o-animation: hexagonTopAnimationn 10s infinite;
+    animation: hexagonTopAnimation 10s infinite !important;
+    -webkit-animation:hexagonTopAnimation 10s infinite !important;
+    -moz-animation:hexagonTopAnimation 10s infinite !important;
+    -o-animation:hexagonTopAnimationn 10s infinite !important;
 }
 
 #hexagon:hover {
-    transform: rotateY(360deg);
-    opacity: 1;
+  animation: rotationHover 1s infinite,
+  hexagonAnimation 10s infinite;
+
+  -webkit-animation: rotationHover 1s infinite,
+  hexagonAnimation 10s infinite;
+
+  -moz-animation: rotationHover 1s infinite,
+  hexagonAnimation 10s infinite;
+
+  -o-animation: rotationHover 1s infinite,
+  hexagonAnimation 10s infinite;
+
+  /*use this for chrome, only works in one browser at a time due to bugs (and has to be written differently for each)*/
+  -webkit-transform:rotate3d(1,1,1,360deg) !important;
+
+
+  -webkit-transition: all 2s ease;
+  -moz-transition: all 2s ease;
+  -o-transition: all 2s ease;
+  transition: all 2s ease;
 }
 
 #hexagon:before:hover {
 
-    transform: rotateY(360deg);
-    transform: inherit;
-    opacity: 1;
+  animation: rotationHover 1s infinite,
+  hexagonBottomAnimation 10s infinite !important;
+
+  -webkit-animation: rotationHover 1s infinite,
+  hexagonBottomAnimation 10s infinite !important;
+
+  -moz-animation: rotationHover 1s infinite,
+  hexagonBottomAnimation 10s infinite !important;
+
+  -o-animation: rotationHover 1s infinite,
+  hexagonBottomAnimation 10s infinite !important;
+
+  /*use this for chrome, only works in one browser at a time due to bugs (and has to be written differently for each)*/
+  -webkit-transform:rotate3d(1,1,1,360deg) !important;
+
+
+  -webkit-transition: all 2s ease;
+  -moz-transition: all 2s ease;
+  -o-transition: all 2s ease;
+  transition: all 2s ease;
 }
 
 #hexagon:after:hover {
-    transform: rotateY(360deg);
-    transform: inherit;
-    opacity: 1;
+  animation: rotationHover 1s infinite,
+  hexagonTopAnimation 10s infinite !important;
+
+  -webkit-animation: rotationHover 1s infinite,
+  hexagonTopAnimation 10s infinite !important;
+
+  -moz-animation: rotationHover 1s infinite,
+  hexagonTopAnimation 10s infinite !important;
+
+  -o-animation: rotationHover 1s infinite,
+  hexagonTopAnimation 10s infinite !important;
+
+  /*use this for chrome*/
+  -webkit-transform:rotateY(360deg) !important;
+
+
+
+  -webkit-transition: all 2s ease;
+  -moz-transition: all 2s ease;
+  -o-transition: all 2s ease;
+  transition: all 2s ease;
 }
 
 @keyframes hexagonAnimation {

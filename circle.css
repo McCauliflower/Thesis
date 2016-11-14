@@ -14,22 +14,160 @@
   -o-transition: all 2s ease;
   transition: all 2s ease;
 
-  animation: circleAnimation 10s infinite;
-  -webkit-animation:circleRowAnimation 10s infinite;
-  -moz-animation: circleAnimation 10s infinite;
-  -o-animation: circleAnimation 10s infinite;
+
+  animation: rotation 10s infinite,
+                circleAnimation 10s infinite;
+  -webkit-animation:rotation 10s infinite,
+                  circleRowAnimation 10s infinite;
+  -moz-animation: rotation 10s infinite,
+                circleAnimation 10s infinite;
+
+  -o-animation: rotation 10s infinite,
+                circleAnimation 10s infinite;
 }
 
 
 #circle:hover{
-  transform: rotateY(360deg);
+  animation: rotationHover 1s infinite,
+              circleAnimation 10s infinite;
+  -webkit-animation: rotationHover 1s infinite,
+                    circleAnimation 10s infinite;
+  -moz-animation: rotationHover 1s infinite,
+                  circleAnimation 10s infinite;
+  -o-animation: rotationHover 1s infinite,
+                circleAnimation 10s infinite;
+
+  -webkit-transition: all 2s ease;
+  -moz-transition: all 2s ease;
+  -o-transition: all 2s ease;
+  transition: all 2s ease;
+
+
+  /*use this for chrome, only works in one browser at a time due to bugs (and has to be written differently for each)*/
+    -webkit-transform:rotate3d(1,1,1,360deg) !important;
+
   opacity:1;
-  background-color:purple;
-
-
 }
 
 
+
+@keyframes rotationHover{
+  from {
+    transform: rotateY(0deg);
+
+      -webkit-transition: all 2s ease;
+      -moz-transition: all 2s ease;
+      -o-transition: all 2s ease;
+      transition: all 2s ease;
+  }
+  to {
+    transform: rotateY(360deg) !important;
+
+      -webkit-transition: all 2s ease;
+      -moz-transition: all 2s ease;
+      -o-transition: all 2s ease;
+      transition: all 2s ease;
+  }
+}
+@-webkit-keyframes rotationHover{
+  from {
+    transform: rotateY(360deg);
+
+        -webkit-transition: all 2s ease;
+        -moz-transition: all 2s ease;
+        -o-transition: all 2s ease;
+        transition: all 2s ease;
+    }
+    to {
+      transform: rotateY(360deg) !important;
+
+        -webkit-transition: all 2s ease;
+        -moz-transition: all 2s ease;
+        -o-transition: all 2s ease;
+        transition: all 2s ease;
+    }
+  }
+}
+@-moz-keyframes rotationHover{
+  from {
+    transform: rotateY(0deg);
+
+    -webkit-transition: all 2s ease;
+    -moz-transition: all 2s ease;
+    -o-transition: all 2s ease;
+    transition: all 2s ease;
+  }
+  to {
+    transform: rotateY(360deg) !important;
+
+    -webkit-transition: all 2s ease;
+    -moz-transition: all 2s ease;
+    -o-transition: all 2s ease;
+    transition: all 2s ease;
+  }
+}
+
+
+
+
+
+
+
+@keyframes rotation{
+  from {
+    transform: rotateY(0deg);
+
+      -webkit-transition: all 2s ease;
+      -moz-transition: all 2s ease;
+      -o-transition: all 2s ease;
+      transition: all 2s ease;
+  }
+  to {
+    transform:rotateY(360deg);
+
+      -webkit-transition: all 2s ease;
+      -moz-transition: all 2s ease;
+      -o-transition: all 2s ease;
+      transition: all 2s ease;
+  }
+}
+@-webkit-keyframes rotation{
+  from {
+    transform: rotateY(0deg);
+
+        -webkit-transition: all 2s ease;
+        -moz-transition: all 2s ease;
+        -o-transition: all 2s ease;
+        transition: all 2s ease;
+    }
+    to {
+      transform: rotateY(360deg);
+
+        -webkit-transition: all 2s ease;
+        -moz-transition: all 2s ease;
+        -o-transition: all 2s ease;
+        transition: all 2s ease;
+    }
+  }
+}
+@-moz-keyframes rotation{
+  from {
+    transform: rotateY(0deg);
+
+    -webkit-transition: all 2s ease;
+    -moz-transition: all 2s ease;
+    -o-transition: all 2s ease;
+    transition: all 2s ease;
+  }
+  to {
+    transform: rotateY(360deg);
+
+    -webkit-transition: all 2s ease;
+    -moz-transition: all 2s ease;
+    -o-transition: all 2s ease;
+    transition: all 2s ease;
+  }
+}
 
 @keyframes circleAnimation{
 

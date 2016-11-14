@@ -24,13 +24,31 @@
   -o-transition: all 2s ease;
   transition: all 2s ease;
 
-  animation: pentagonAnimation 10s infinite;
-  -webkit-animation: pentagonAnimation 10s infinite;
-  -moz-animation: pentagonAnimation 10s infinite;
-  -o-animation: pentagonAnimationn 10s infinite;
+
+  animation: rotation 10s infinite,
+              pentagonAnimation 10s infinite;
+  -webkit-animation:rotation 10s infinite,
+                pentagonAnimation 10s infinite;
+  -moz-animation: rotation 10s infinite,
+                  pentagonAnimation 10s infinite;
+  -o-animation: rotation 10s infinite,
+                pentagonAnimationn 10s infinite;
+
+
+
 }
 
 #pentagon:before {
+  animation:
+              pentagonTopAnimation 10s infinite !important;
+  -webkit-animation:
+                pentagonTopAnimation 10s infinite !important;;
+  -moz-animation:
+                  pentagonTopAnimation 10s infinite !important;
+  -o-animation:
+                pentagonTopAnimationn 10s infinite !important;
+
+
     content: "";
     position: absolute;
     height: 0;
@@ -39,7 +57,6 @@
     left: -18px;
     border-width: 0 55px 55px;
     border-style: solid;
-    border-color: transparent transparent red;
     z-index:99;
 
     -webkit-transition:all 2s ease;
@@ -47,23 +64,190 @@
     -o-transition: all 2s ease;
     transition: all 2s ease;
 
+    inerhit:animation;
+    inherit:-webkit-animation;
+    inherit:-moz-animation;
 
-    animation: pentagonTopAnimation 10s infinite;
-    -webkit-animation: pentagonTopAnimation 10s infinite;
-    -moz-animation: pentagonTopAnimation 10s infinite;
-    -o-animation: pentagonTopAnimationn 10s infinite;
   }
+
 
 
 
   #pentagon:hover{
-    transform: rotateY(360deg);
+    animation: rotationHover 1s infinite,
+    pentagonAnimation 10s infinite !important;
+
+    -webkit-animation: rotationHover 1s infinite,
+    pentagonAnimation 10s infinite !important;
+
+    -moz-animation: rotationHover 1s infinite,
+    pentagonAnimation 10s infinite !important;
+
+    -o-animation: rotationHover 1s infinite,
+    pentagonAnimation 10s infinite !important;
+
+
+    -webkit-transition: all 2s ease;
+    -moz-transition: all 2s ease;
+    -o-transition: all 2s ease;
+    transition: all 2s ease;
+
     opacity:1;
+
+
+    /*use this for chrome, only works in one browser at a time due to bugs (and has to be written differently for each)*/
+      -webkit-transform:rotate3d(1,1,1,360deg) !important;
+
   }
 
   #pentagon:before:hover{
-    transform:inherit;
+    animation: rotationHover 1s infinite,
+    pentagonTopAnimation 10s infinite !important;
+
+    -webkit-animation: rotationHover 1s infinite,
+    pentagonTopAnimation 10s infinite !important;
+
+    -moz-animation: rotationHover 1s infinite,
+    pentagonTopAnimation 10s infinite !important;
+
+    -o-animation: rotationHover 1s infinite,
+    pentagonTopAnimation 10s infinite !important;
+
+
+    /*use this for chrome, only works in one browser at a time due to bugs (and has to be written differently for each)*/
+      -webkit-transform:rotate3d(1,1,1,360deg) !important;
+
+    -webkit-transition: all 2s ease;
+    -moz-transition: all 2s ease;
+    -o-transition: all 2s ease;
+    transition: all 2s ease;
+
+    opacity:1;
   }
+
+
+
+
+  @keyframes rotationHover{
+    from {
+      transform: rotateY(0deg);
+
+        -webkit-transition: all 2s ease;
+        -moz-transition: all 2s ease;
+        -o-transition: all 2s ease;
+        transition: all 2s ease;
+    }
+    to {
+      transform: rotateY(360deg) !important;
+
+        -webkit-transition: all 2s ease;
+        -moz-transition: all 2s ease;
+        -o-transition: all 2s ease;
+        transition: all 2s ease;
+    }
+  }
+  @-webkit-keyframes rotationHover{
+    from {
+      transform: rotateY(360deg);
+
+          -webkit-transition: all 2s ease;
+          -moz-transition: all 2s ease;
+          -o-transition: all 2s ease;
+          transition: all 2s ease;
+      }
+      to {
+        transform: rotateY(360deg) !important;
+
+          -webkit-transition: all 2s ease;
+          -moz-transition: all 2s ease;
+          -o-transition: all 2s ease;
+          transition: all 2s ease;
+      }
+    }
+  }
+  @-moz-keyframes rotationHover{
+    from {
+      transform: rotateY(0deg);
+
+      -webkit-transition: all 2s ease;
+      -moz-transition: all 2s ease;
+      -o-transition: all 2s ease;
+      transition: all 2s ease;
+    }
+    to {
+      transform: rotateY(360deg) !important;
+
+      -webkit-transition: all 2s ease;
+      -moz-transition: all 2s ease;
+      -o-transition: all 2s ease;
+      transition: all 2s ease;
+    }
+  }
+
+
+
+
+
+
+
+  @keyframes rotation{
+    from {
+      transform: rotateY(0deg);
+
+        -webkit-transition: all 2s ease;
+        -moz-transition: all 2s ease;
+        -o-transition: all 2s ease;
+        transition: all 2s ease;
+    }
+    to {
+      transform:rotateY(360deg);
+
+        -webkit-transition: all 2s ease;
+        -moz-transition: all 2s ease;
+        -o-transition: all 2s ease;
+        transition: all 2s ease;
+    }
+  }
+  @-webkit-keyframes rotation{
+    from {
+      transform: rotateY(0deg);
+
+          -webkit-transition: all 2s ease;
+          -moz-transition: all 2s ease;
+          -o-transition: all 2s ease;
+          transition: all 2s ease;
+      }
+      to {
+        transform: rotateY(360deg);
+
+          -webkit-transition: all 2s ease;
+          -moz-transition: all 2s ease;
+          -o-transition: all 2s ease;
+          transition: all 2s ease;
+      }
+    }
+  }
+  @-moz-keyframes rotation{
+    from {
+      transform: rotateY(0deg);
+
+      -webkit-transition: all 2s ease;
+      -moz-transition: all 2s ease;
+      -o-transition: all 2s ease;
+      transition: all 2s ease;
+    }
+    to {
+      transform: rotateY(360deg);
+
+      -webkit-transition: all 2s ease;
+      -moz-transition: all 2s ease;
+      -o-transition: all 2s ease;
+      transition: all 2s ease;
+    }
+  }
+
+
+
 
   @keyframes pentagonAnimation{
 
@@ -94,31 +278,62 @@
     100% { border-color: #FF00EF transparent;  }
   }
 
+  @-moz-keyframes pentagonAnimation{
+
+    0% { border-color: #8300FF transparent;  }
+    10% { border-color: #0030FF transparent;  }
+    20%{ border-color: #000BFF transparent;   }
+    30%  { border-color: #00FFD8 transparent; }
+    40% { border-color: #1EFF00 transparent; }
+    50% { border-color: #FF9000 transparent; }
+    60% { border-color: #FF5D00 transparent; }
+    70% { border-color: red transparent; }
+    80% { border-color: #FF0075 transparent; }
+    90% { border-color: #00FF6B transparent; }
+    100% { border-color: #FF00EF transparent;  }
+  }
+
   @keyframes pentagonTopAnimation{
 
-    0% { border-color:transparent transparent #8300FF;  }
-    10% { border-color:transparent transparent #0030FF;  }
-    20%{ border-color:transparent transparent #000BFF;   }
-    30%  { border-color:transparent transparent #00FFD8; }
-    40% { border-color:transparent transparent #1EFF00; }
-    50% { border-color:transparent transparent #FF9000; }
-    60% { border-color:transparent transparent #FF5D00; }
-    70% { border-color:transparent transparent red; }
-    80% { border-color:transparent transparent #FF0075; }
-    90% { border-color:transparent transparent #00FF6B; }
-    100% { border-color:transparent transparent #FF00EF;  }
+    0% { border-color:#8300FF transparent;  }
+    10% { border-color:#0030FF transparent;  }
+    20%{ border-color:#000BFF transparent;   }
+    30%  { border-color:#00FFD8 transparent; }
+    40% { border-color:#1EFF00 transparent; }
+    50% { border-color:#FF9000 transparent; }
+    60% { border-color:#FF5D00 transparent; }
+    70% { border-color:red transparent; }
+    80% { border-color:#FF0075 transparent; }
+    90% { border-color: #00FF6B transparent; }
+    100% { border-color:#FF00EF transparent;  }
   }
   @-webkit-keyframes pentagonTopAnimation{
 
-    0% { border-color:transparent transparent #8300FF;  }
-    10% { border-color:transparent transparent #0030FF;  }
-    20%{ border-color:transparent transparent #000BFF;   }
-    30%  { border-color:transparent transparent #00FFD8; }
-    40% { border-color:transparent transparent #1EFF00; }
-    50% { border-color:transparent transparent #FF9000; }
-    60% { border-color:transparent transparent #FF5D00; }
-    70% { border-color:transparent transparent red; }
-    80% { border-color:transparent transparent #FF0075; }
-    90% { border-color:transparent transparent #00FF6B; }
-    100% { border-color:transparent transparent #FF00EF;  }
+
+        0% { border-color:#8300FF transparent;  }
+        10% { border-color:#0030FF transparent;  }
+        20%{ border-color:#000BFF transparent;   }
+        30%  { border-color:#00FFD8 transparent; }
+        40% { border-color:#1EFF00 transparent; }
+        50% { border-color:#FF9000 transparent; }
+        60% { border-color:#FF5D00 transparent; }
+        70% { border-color:red transparent; }
+        80% { border-color:#FF0075 transparent; }
+        90% { border-color: #00FF6B transparent; }
+        100% { border-color:#FF00EF transparent;  }
+  }
+
+  @-moz-keyframes pentagonTopAnimation{
+
+        0% { border-color:#8300FF transparent;  }
+        10% { border-color:#0030FF transparent;  }
+        20%{ border-color:#000BFF transparent;   }
+        30%  { border-color:#00FFD8 transparent; }
+        40% { border-color:#1EFF00 transparent; }
+        50% { border-color:#FF9000 transparent; }
+        60% { border-color:#FF5D00 transparent; }
+        70% { border-color:red transparent; }
+        80% { border-color:#FF0075 transparent; }
+        90% { border-color: #00FF6B transparent; }
+        100% { border-color:#FF00EF transparent;  }
   }

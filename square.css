@@ -15,20 +15,162 @@
   -o-transition: all 2s ease;
   transition: all 2s ease;
 
-  animation: squareAnimation 10s infinite;
-  -webkit-animation: squareAnimation 10s infinite;
-  -moz-animation: squareAnimation 10s infinite;
-  -o-animation: squareAnimation 10s infinite;
+animation: rotation 10s infinite,
+            squareAnimation 10s infinite;
+  -webkit-animation: rotation 10s infinite,
+            squareAnimation 10s infinite;
+  -moz-animation: rotation 10s infinite,
+                  squareAnimation 10s infinite;
+  -o-animation: rotation 10s infinite,
+                squareAnimation 10s infinite;
 }
 
 #square:hover{
-  transform: rotateY(360deg);
+
+  animation: rotationHoverSquare 1s infinite,
+            squareAnimation 10s infinite;
+  -webkit-animation: rotationHoverSquare 1s infinite,
+              squareAnimation 10s infinite;
+  -moz-animation: rotationHoverSquare 1s infinite,
+                  squareAnimation 10s infinite;
+  -o-animation: rotationHoverSquare 1s infinite,
+                squareAnimation 10s infinite;
+
+  -webkit-transition: all 2s ease;
+  -moz-transition: all 2s ease;
+  -o-transition: all 2s ease;
+  transition: all 2s ease;
 
   opacity:1;
   background-color:white;
 
+  /*use this for chrome, only works in one browser at a time due to bugs (and has to be written differently for each)*/
+    -webkit-transform:rotate3d(1,1,1,360deg) !important;
 
 }
+
+
+
+
+@keyframes rotationHoverSquare{
+  from {
+    transform: rotateY(0deg);
+
+      -webkit-transition: all 2s ease;
+      -moz-transition: all 2s ease;
+      -o-transition: all 2s ease;
+      transition: all 2s ease;
+  }
+  to {
+    transform: rotateY(360deg) !important;
+
+      -webkit-transition: all 2s ease;
+      -moz-transition: all 2s ease;
+      -o-transition: all 2s ease;
+      transition: all 2s ease;
+  }
+}
+@-webkit-keyframes rotationHoverSquare{
+  from {
+    transform: rotateY(360deg);
+
+        -webkit-transition: all 2s ease;
+        -moz-transition: all 2s ease;
+        -o-transition: all 2s ease;
+        transition: all 2s ease;
+    }
+    to {
+      transform: rotateY(360deg) !important;
+
+        -webkit-transition: all 2s ease;
+        -moz-transition: all 2s ease;
+        -o-transition: all 2s ease;
+        transition: all 2s ease;
+    }
+  }
+}
+@-moz-keyframes rotationHoverSquare{
+  from {
+    transform: rotateY(0deg);
+
+    -webkit-transition: all 2s ease;
+    -moz-transition: all 2s ease;
+    -o-transition: all 2s ease;
+    transition: all 2s ease;
+  }
+  to {
+    transform: rotateY(360deg) !important;
+
+    -webkit-transition: all 2s ease;
+    -moz-transition: all 2s ease;
+    -o-transition: all 2s ease;
+    transition: all 2s ease;
+  }
+}
+
+
+
+
+
+
+
+@keyframes rotation{
+  from {
+    transform: rotateY(0deg);
+
+      -webkit-transition: all 2s ease;
+      -moz-transition: all 2s ease;
+      -o-transition: all 2s ease;
+      transition: all 2s ease;
+  }
+  to {
+    transform:rotateY(360deg);
+
+      -webkit-transition: all 2s ease;
+      -moz-transition: all 2s ease;
+      -o-transition: all 2s ease;
+      transition: all 2s ease;
+  }
+}
+@-webkit-keyframes rotation{
+  from {
+    transform: rotateY(0deg);
+
+        -webkit-transition: all 2s ease;
+        -moz-transition: all 2s ease;
+        -o-transition: all 2s ease;
+        transition: all 2s ease;
+    }
+    to {
+      transform: rotateY(360deg);
+
+        -webkit-transition: all 2s ease;
+        -moz-transition: all 2s ease;
+        -o-transition: all 2s ease;
+        transition: all 2s ease;
+    }
+  }
+}
+@-moz-keyframes rotation{
+  from {
+    transform: rotateY(0deg);
+
+    -webkit-transition: all 2s ease;
+    -moz-transition: all 2s ease;
+    -o-transition: all 2s ease;
+    transition: all 2s ease;
+  }
+  to {
+    transform: rotateY(360deg);
+
+    -webkit-transition: all 2s ease;
+    -moz-transition: all 2s ease;
+    -o-transition: all 2s ease;
+    transition: all 2s ease;
+  }
+}
+
+
 
 
 
