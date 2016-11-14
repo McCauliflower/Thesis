@@ -5,8 +5,8 @@
   right: calc(50% - 300px);
   bottom:475px;
   background-color:green;
-  height:100px;
-  width:100px;
+  height:105px;
+  width:105px;
   z-index:99;
 
   -webkit-transition:all 2s ease;
@@ -28,13 +28,13 @@
 
 
 #circle:hover{
-  animation: rotationHover 1s infinite,
+  animation: rotationHover 1s infinite alternate,
               circleAnimation 10s infinite;
-  -webkit-animation: rotationHover 1s infinite,
+  -webkit-animation: rotationHover 1s infinite alternate,
                     circleAnimation 10s infinite;
-  -moz-animation: rotationHover 1s infinite,
+  -moz-animation: rotationHover 1s infinite alternate,
                   circleAnimation 10s infinite;
-  -o-animation: rotationHover 1s infinite,
+  -o-animation: rotationHover 1s infinite alternate,
                 circleAnimation 10s infinite;
 
   -webkit-transition: all 2s ease;

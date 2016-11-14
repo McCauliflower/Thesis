@@ -27,13 +27,13 @@ animation: rotation 10s infinite,
 
 #square:hover{
 
-  animation: rotationHoverSquare 1s infinite,
+  animation: rotationHoverSquare 1s infinite alternate,
             squareAnimation 10s infinite;
-  -webkit-animation: rotationHoverSquare 1s infinite,
+  -webkit-animation: rotationHoverSquare 1s infinite alternate,
               squareAnimation 10s infinite;
-  -moz-animation: rotationHoverSquare 1s infinite,
+  -moz-animation: rotationHoverSquare 1s infinite alternate,
                   squareAnimation 10s infinite;
-  -o-animation: rotationHoverSquare 1s infinite,
+  -o-animation: rotationHoverSquare 1s infinite alternate,
                 squareAnimation 10s infinite;
 
   -webkit-transition: all 2s ease;

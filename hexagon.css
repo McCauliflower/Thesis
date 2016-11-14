@@ -90,16 +90,16 @@
 }
 
 #hexagon:hover {
-  animation: rotationHover 1s infinite,
+  animation: rotationHover 1s infinite alternate,
   hexagonAnimation 10s infinite;
 
-  -webkit-animation: rotationHover 1s infinite,
+  -webkit-animation: rotationHover 1s infinite alternate,
   hexagonAnimation 10s infinite;
 
-  -moz-animation: rotationHover 1s infinite,
+  -moz-animation: rotationHover 1s infinite alternate,
   hexagonAnimation 10s infinite;
 
-  -o-animation: rotationHover 1s infinite,
+  -o-animation: rotationHover 1s infinite alternate,
   hexagonAnimation 10s infinite;
 
   /*use this for chrome, only works in one browser at a time due to bugs (and has to be written differently for each)*/
@@ -114,16 +114,16 @@
 
 #hexagon:before:hover {
 
-  animation: rotationHover 1s infinite,
+  animation: rotationHover 1s infinite alternate,
   hexagonBottomAnimation 10s infinite !important;
 
-  -webkit-animation: rotationHover 1s infinite,
+  -webkit-animation: rotationHover 1s infinite alternate,
   hexagonBottomAnimation 10s infinite !important;
 
-  -moz-animation: rotationHover 1s infinite,
+  -moz-animation: rotationHover 1s infinite alternate,
   hexagonBottomAnimation 10s infinite !important;
 
-  -o-animation: rotationHover 1s infinite,
+  -o-animation: rotationHover 1s infinite alternate,
   hexagonBottomAnimation 10s infinite !important;
 
   /*use this for chrome, only works in one browser at a time due to bugs (and has to be written differently for each)*/
@@ -137,16 +137,16 @@
 }
 
 #hexagon:after:hover {
-  animation: rotationHover 1s infinite,
+  animation: rotationHover 1s infinite alternate,
   hexagonTopAnimation 10s infinite !important;
 
-  -webkit-animation: rotationHover 1s infinite,
+  -webkit-animation: rotationHover 1s infinite alternate,
   hexagonTopAnimation 10s infinite !important;
 
-  -moz-animation: rotationHover 1s infinite,
+  -moz-animation: rotationHover 1s infinite alternate,
   hexagonTopAnimation 10s infinite !important;
 
-  -o-animation: rotationHover 1s infinite,
+  -o-animation: rotationHover 1s infinite alternate,
   hexagonTopAnimation 10s infinite !important;
 
   /*use this for chrome*/

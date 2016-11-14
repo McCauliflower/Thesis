@@ -74,16 +74,16 @@
 
 
   #pentagon:hover{
-    animation: rotationHover 1s infinite,
+    animation: rotationHover 1s infinite alternate,
     pentagonAnimation 10s infinite !important;
 
-    -webkit-animation: rotationHover 1s infinite,
+    -webkit-animation: rotationHover 1s infinite alternate,
     pentagonAnimation 10s infinite !important;
 
-    -moz-animation: rotationHover 1s infinite,
+    -moz-animation: rotationHover 1s infinite alternate,
     pentagonAnimation 10s infinite !important;
 
-    -o-animation: rotationHover 1s infinite,
+    -o-animation: rotationHover 1s infinite alternate,
     pentagonAnimation 10s infinite !important;
 
 
@@ -101,16 +101,16 @@
   }
 
   #pentagon:before:hover{
-    animation: rotationHover 1s infinite,
+    animation: rotationHover 1s infinite alternate,
     pentagonTopAnimation 10s infinite !important;
 
-    -webkit-animation: rotationHover 1s infinite,
+    -webkit-animation: rotationHover 1s infinite alternate,
     pentagonTopAnimation 10s infinite !important;
 
-    -moz-animation: rotationHover 1s infinite,
+    -moz-animation: rotationHover 1s infinite alternate,
     pentagonTopAnimation 10s infinite !important;
 
-    -o-animation: rotationHover 1s infinite,
+    -o-animation: rotationHover 1s infinite alternate,
     pentagonTopAnimation 10s infinite !important;
 
 

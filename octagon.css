@@ -34,8 +34,8 @@ position: absolute;
 top: 0;
 left: 0;
 border-bottom: 29px solid gray;
-border-left: 29px solid #545864!important;
-border-right: 29px solid #545864 !important;;
+border-left: 29px solid #59585E !important;
+border-right: 29px solid #59585E !important;;
 width: 42px;
 height: 0;
 
@@ -60,8 +60,8 @@ position: absolute;
 bottom: 0;
 left: 0;
 border-top: 29px solid gray;
-border-left: 29px solid #545864!important;
-border-right: 29px solid #545864 !important;
+border-left: 29px solid #59585E !important;
+border-right: 29px solid #59585E !important;
 width: 42px;
 height: 0;
 
@@ -83,16 +83,16 @@ animation: octagonBottomAnimation 10s infinite;
 
 
 #octagon:hover {
-  animation: rotationHover 1s infinite,
+  animation: rotationHover 1s infinite alternate,
   octagonAnimation 10s infinite;
 
-  -webkit-animation: rotationHover 1s infinite,
+  -webkit-animation: rotationHover 1s infinite alternate,
   octagonAnimation 10s infinite;
 
-  -moz-animation: rotationHover 1s infinite,
+  -moz-animation: rotationHover 1s infinite alternate,
   octagonAnimation 10s infinite;
 
-  -o-animation: rotationHover 1s infinite,
+  -o-animation: rotationHover 1s infinite alternate,
   octagonAnimation 10s infinite;
 
 
@@ -107,13 +107,13 @@ animation: octagonBottomAnimation 10s infinite;
   animation: rotationHover 1s infinite,
   octagonTopAnimation 10s infinite;
 
-  -webkit-animation: rotationHover 1s infinite,
+  -webkit-animation: rotationHover 1s infinite alternate,
   octagonTopAnimation 10s infinite;
 
-  -moz-animation: rotationHover 1s infinite,
+  -moz-animation: rotationHover 1s infinite alternate,
   octagonTopAnimation 10s infinite;
 
-  -o-animation: rotationHover 1s infinite,
+  -o-animation: rotationHover 1s infinite alternate,
   octagonTopAnimation 10s infinite;
 
 
@@ -126,16 +126,16 @@ animation: octagonBottomAnimation 10s infinite;
 }
 
 #octagon:after:hover {
-  animation: rotationHover 1s infinite,
+  animation: rotationHover 1s infinite alternate,
   octagonBottomAnimation 10s infinite;
 
-  -webkit-animation: rotationHover 1s infinite,
+  -webkit-animation: rotationHover 1s infinite alternate,
   octagonBottomAnimation 10s infinite;
 
-  -moz-animation: rotationHover 1s infinite,
+  -moz-animation: rotationHover 1s infinite alternate,
   octagonBottomAnimation 10s infinite;
 
-  -o-animation: rotationHover 1s infinite,
+  -o-animation: rotationHover 1s infinite alternate,
   octagonBottomAnimation 10s infinite;
 
   /*use this for chrome, only works in one browser at a time due to bugs (and has to be written differently for each)*/
@@ -195,96 +195,95 @@ animation: octagonBottomAnimation 10s infinite;
 
 @keyframes octagonTopAnimation{
 
-  0% { border-bottom: 29px solid #FF5D00;border-left:29px solid black;border-right:29px solid black; }
-  10% { border-bottom: 29px solid red;border-left:29px solid black;border-right:29px solid black; }
-  20% { border-bottom:29px solid #FF0075;border-left:29px solid black;border-right:29px solid black; }
-  30% { border-bottom:29px solid  #00FF6B;border-left:29px solid black;border-right:29px solid black; }
-  40% { border-bottom:29px solid  #FF00EF;border-left:29px solid black;border-right:29px solid black; }
-  50% { border-bottom: 29px solid #8300FF;border-left:29px solid black;border-right:29px solid black; }
-  60% { border-bottom:29px solid  #0030FF;border-left:29px solid black;border-right:29px solid black; }
-  70%{ border-bottom: 29px solid #000BFF;border-left:29px solid black;border-right:29px solid black; }
-  80%  { border-bottom:29px solid  #00FFD8;border-left:29px solid black;border-right:29px solid black; }
-  90% { border-bottom:29px solid  #1EFF00;border-left:29px solid black;border-right:29px solid black; }
-  100% { border-bottom:29px solid  #FF9000;border-left:29px solid black;border-right:29px solid black; }
+  0% { border-bottom: 29px solid #FF5D00;border-left:29px solid #59585E;border-right:29px solid #59585E; }
+  10% { border-bottom: 29px solid red;border-left:29px solid #59585E;border-right:29px solid #59585E;  }
+  20% { border-bottom:29px solid #FF0075;border-left:29px solid #59585E;border-right:29px solid #59585E; }
+  30% { border-bottom:29px solid  #00FF6B;border-left:29px solid #59585E;border-right:29px solid #59585E; }
+  40% { border-bottom:29px solid  #FF00EF;border-left:29px solid #59585E;border-right:29px solid #59585E; }
+  50% { border-bottom: 29px solid #8300FF;border-left:29px solid #59585E;border-right:29px solid #59585E; }
+  60% { border-bottom:29px solid  #0030FF;border-left:29px solid #59585E;border-right:29px solid #59585E; }
+  70%{ border-bottom: 29px solid #000BFF;border-left:29px solid #59585E;border-right:29px solid #59585E; }
+  80%  { border-bottom:29px solid  #00FFD8;border-left:29px solid #59585E;border-right:29px solid #59585E; }
+  90% { border-bottom:29px solid  #1EFF00;border-left:29px solid #59585E;border-right:29px solid #59585E; }
+  100% { border-bottom:29px solid  #FF9000;border-left:29px solid #59585E;border-right:29px solid #59585E; }
 
 }
 
 
 @-webkit-keyframes octagonTopAnimation{
 
-  0% { border-bottom: 29px solid #FF5D00;border-left:29px solid black;border-right:29px solid black; }
-  10% { border-bottom: 29px solid red;border-left:29px solid black;border-right:29px solid black; }
-  20% { border-bottom:29px solid #FF0075;border-left:29px solid black;border-right:29px solid black; }
-  30% { border-bottom:29px solid  #00FF6B;border-left:29px solid black;border-right:29px solid black; }
-  40% { border-bottom:29px solid  #FF00EF;border-left:29px solid black;border-right:29px solid black; }
-  50% { border-bottom: 29px solid #8300FF;border-left:29px solid black;border-right:29px solid black; }
-  60% { border-bottom:29px solid  #0030FF;border-left:29px solid black;border-right:29px solid black; }
-  70%{ border-bottom: 29px solid #000BFF;border-left:29px solid black;border-right:29px solid black; }
-  80%  { border-bottom:29px solid  #00FFD8;border-left:29px solid black;border-right:29px solid black; }
-  90% { border-bottom:29px solid  #1EFF00;border-left:29px solid black;border-right:29px solid black; }
-  100% { border-bottom:29px solid  #FF9000;border-left:29px solid black;border-right:29px solid black; }
+  0% { border-bottom: 29px solid #FF5D00;border-left:29px solid #59585E;border-right:29px solid #59585E; }
+  10% { border-bottom: 29px solid red;border-left:29px solid #59585E;border-right:29px solid #59585E;  }
+  20% { border-bottom:29px solid #FF0075;border-left:29px solid #59585E;border-right:29px solid #59585E; }
+  30% { border-bottom:29px solid  #00FF6B;border-left:29px solid #59585E;border-right:29px solid #59585E; }
+  40% { border-bottom:29px solid  #FF00EF;border-left:29px solid #59585E;border-right:29px solid #59585E; }
+  50% { border-bottom: 29px solid #8300FF;border-left:29px solid #59585E;border-right:29px solid #59585E; }
+  60% { border-bottom:29px solid  #0030FF;border-left:29px solid #59585E;border-right:29px solid #59585E; }
+  70%{ border-bottom: 29px solid #000BFF;border-left:29px solid #59585E;border-right:29px solid #59585E; }
+  80%  { border-bottom:29px solid  #00FFD8;border-left:29px solid #59585E;border-right:29px solid #59585E; }
+  90% { border-bottom:29px solid  #1EFF00;border-left:29px solid #59585E;border-right:29px solid #59585E; }
+  100% { border-bottom:29px solid  #FF9000;border-left:29px solid #59585E;border-right:29px solid #59585E; }
 
 }
 
-
 @-moz-keyframes octagonTopAnimation{
-  0% { border-bottom: 29px solid #FF5D00;border-left:29px solid black;border-right:29px solid black; }
-  10% { border-bottom: 29px solid red;border-left:29px solid black;border-right:29px solid black; }
-  20% { border-bottom:29px solid #FF0075;border-left:29px solid black;border-right:29px solid black; }
-  30% { border-bottom:29px solid  #00FF6B;border-left:29px solid black;border-right:29px solid black; }
-  40% { border-bottom:29px solid  #FF00EF;border-left:29px solid black;border-right:29px solid black; }
-  50% { border-bottom: 29px solid #8300FF;border-left:29px solid black;border-right:29px solid black; }
-  60% { border-bottom:29px solid  #0030FF;border-left:29px solid black;border-right:29px solid black; }
-  70%{ border-bottom: 29px solid #000BFF;border-left:29px solid black;border-right:29px solid black; }
-  80%  { border-bottom:29px solid  #00FFD8;border-left:29px solid black;border-right:29px solid black; }
-  90% { border-bottom:29px solid  #1EFF00;border-left:29px solid black;border-right:29px solid black; }
-  100% { border-bottom:29px solid  #FF9000;border-left:29px solid black;border-right:29px solid black; }
+  0% { border-bottom: 29px solid #FF5D00;border-left:29px solid #59585E;border-right:29px solid #59585E; }
+  10% { border-bottom: 29px solid red;border-left:29px solid #59585E;border-right:29px solid #59585E;  }
+  20% { border-bottom:29px solid #FF0075;border-left:29px solid #59585E;border-right:29px solid #59585E; }
+  30% { border-bottom:29px solid  #00FF6B;border-left:29px solid #59585E;border-right:29px solid #59585E; }
+  40% { border-bottom:29px solid  #FF00EF;border-left:29px solid #59585E;border-right:29px solid #59585E; }
+  50% { border-bottom: 29px solid #8300FF;border-left:29px solid #59585E;border-right:29px solid #59585E; }
+  60% { border-bottom:29px solid  #0030FF;border-left:29px solid #59585E;border-right:29px solid #59585E; }
+  70%{ border-bottom: 29px solid #000BFF;border-left:29px solid #59585E;border-right:29px solid #59585E; }
+  80%  { border-bottom:29px solid  #00FFD8;border-left:29px solid #59585E;border-right:29px solid #59585E; }
+  90% { border-bottom:29px solid  #1EFF00;border-left:29px solid #59585E;border-right:29px solid #59585E; }
+  100% { border-bottom:29px solid  #FF9000;border-left:29px solid #59585E;border-right:29px solid #59585E; }
 
 }
 
 @keyframes octagonBottomAnimation{
 
-  0% { border-top: 29px solid #FF5D00;border-left:29px solid black;border-right:29px solid black; }
-  10% { border-top: 29px solid red;border-left:29px solid black;border-right:29px solid black; }
-  20% { border-top: 29px solid #FF0075;border-left:29px solid black;border-right:29px solid black; }
-  30% { border-top:29px solid  #00FF6B;border-left:29px solid black;border-right:29px solid black; }
-  40% { border-top:29px solid  #FF00EF;border-left:29px solid black;border-right:29px solid black; }
-  50% { border-top: 29px solid #8300FF;border-left:29px solid black;border-right:29px solid black; }
-  60% { border-top:29px solid  #0030FF;border-left:29px solid black;border-right:29px solid black; }
-  70%{ border-top: 29px solid #000BFF;border-left:29px solid black;border-right:29px solid black; }
-  80%  { border-top:29px solid  #00FFD8;border-left:29px solid black;border-right:29px solid black; }
-  90% { border-top:29px solid  #1EFF00;border-left:29px solid black;border-right:29px solid black; }
-  100% { border-top:29px solid  #FF9000;border-left:29px solid black;border-right:29px solid black; }
+  0% { border-top: 29px solid #FF5D00;border-left:29px solid #59585E;border-right:29px solid #59585E; }
+  10% { border-top: 29px solid red;border-left:29px solid #59585E;border-right:29px solid #59585E; }
+  20% { border-top: 29px solid #FF0075;border-left:29px solid #59585E;border-right:29px solid #59585E; }
+  30% { border-top:29px solid  #00FF6B;border-left:29px solid #59585E;border-right:29px solid #59585E; }
+  40% { border-top:29px solid  #FF00EF;border-left:29px solid #59585E;border-right:29px solid #59585E; }
+  50% { border-top: 29px solid #8300FF;border-left:29px solid #59585E;border-right:29px solid #59585E; }
+  60% { border-top:29px solid  #0030FF;border-left:29px solid #59585E;border-right:29px solid #59585E; }
+  70%{ border-top: 29px solid #000BFF;border-left:29px solid #59585E;border-right:29px solid #59585E; }
+  80%  { border-top:29px solid  #00FFD8;border-left:29px solid #59585E;border-right:29px solid #59585E; }
+  90% { border-top:29px solid  #1EFF00;border-left:29px solid #59585E;border-right:29px solid #59585E; }
+  100% { border-top:29px solid  #FF9000;border-left:29px solid #59585E;border-right:29px solid #59585E; }
 
 }
 
 @-webkit-keyframes octagonBottomAnimation{
-  0% { border-top: 29px solid #FF5D00;border-left:29px solid black;border-right:29px solid black; }
-  10% { border-top: 29px solid red;border-left:29px solid black;border-right:29px solid black; }
-  20% { border-top: 29px solid #FF0075;border-left:29px solid black;border-right:29px solid black; }
-  30% { border-top:29px solid  #00FF6B;border-left:29px solid black;border-right:29px solid black; }
-  40% { border-top:29px solid  #FF00EF;border-left:29px solid black;border-right:29px solid black; }
-  50% { border-top: 29px solid #8300FF;border-left:29px solid black;border-right:29px solid black; }
-  60% { border-top:29px solid  #0030FF;border-left:29px solid black;border-right:29px solid black; }
-  70%{ border-top: 29px solid #000BFF;border-left:29px solid black;border-right:29px solid black; }
-  80%  { border-top:29px solid  #00FFD8;border-left:29px solid black;border-right:29px solid black; }
-  90% { border-top:29px solid  #1EFF00;border-left:29px solid black;border-right:29px solid black; }
-  100% { border-top:29px solid  #FF9000;border-left:29px solid black;border-right:29px solid black; }
+  0% { border-top: 29px solid #FF5D00;border-left:29px solid #59585E;border-right:29px solid #59585E; }
+  10% { border-top: 29px solid red;border-left:29px solid #59585E;border-right:29px solid #59585E; }
+  20% { border-top: 29px solid #FF0075;border-left:29px solid #59585E;border-right:29px solid #59585E; }
+  30% { border-top:29px solid  #00FF6B;border-left:29px solid #59585E;border-right:29px solid #59585E; }
+  40% { border-top:29px solid  #FF00EF;border-left:29px solid #59585E;border-right:29px solid #59585E; }
+  50% { border-top: 29px solid #8300FF;border-left:29px solid #59585E;border-right:29px solid #59585E; }
+  60% { border-top:29px solid  #0030FF;border-left:29px solid #59585E;border-right:29px solid #59585E; }
+  70%{ border-top: 29px solid #000BFF;border-left:29px solid #59585E;border-right:29px solid #59585E; }
+  80%  { border-top:29px solid  #00FFD8;border-left:29px solid #59585E;border-right:29px solid #59585E; }
+  90% { border-top:29px solid  #1EFF00;border-left:29px solid #59585E;border-right:29px solid #59585E; }
+  100% { border-top:29px solid  #FF9000;border-left:29px solid #59585E;border-right:29px solid #59585E; }
 
 }
 
 
 @-moz-keyframes octagonBottomAnimation{
-  0% { border-top: 29px solid #FF5D00;border-left:29px solid black;border-right:29px solid black; }
-  10% { border-top: 29px solid red;border-left:29px solid black;border-right:29px solid black; }
-  20% { border-top: 29px solid #FF0075;border-left:29px solid black;border-right:29px solid black; }
-  30% { border-top:29px solid  #00FF6B;border-left:29px solid black;border-right:29px solid black; }
-  40% { border-top:29px solid  #FF00EF;border-left:29px solid black;border-right:29px solid black; }
-  50% { border-top: 29px solid #8300FF;border-left:29px solid black;border-right:29px solid black; }
-  60% { border-top:29px solid  #0030FF;border-left:29px solid black;border-right:29px solid black; }
-  70%{ border-top: 29px solid #000BFF;border-left:29px solid black;border-right:29px solid black; }
-  80%  { border-top:29px solid  #00FFD8;border-left:29px solid black;border-right:29px solid black; }
-  90% { border-top:29px solid  #1EFF00;border-left:29px solid black;border-right:29px solid black; }
-  100% { border-top:29px solid  #FF9000;border-left:29px solid black;border-right:29px solid black; }
+  0% { border-top: 29px solid #FF5D00;border-left:29px solid #59585E;border-right:29px solid #59585E; }
+  10% { border-top: 29px solid red;border-left:29px solid #59585E;border-right:29px solid #59585E; }
+  20% { border-top: 29px solid #FF0075;border-left:29px solid #59585E;border-right:29px solid #59585E; }
+  30% { border-top:29px solid  #00FF6B;border-left:29px solid #59585E;border-right:29px solid #59585E; }
+  40% { border-top:29px solid  #FF00EF;border-left:29px solid #59585E;border-right:29px solid #59585E; }
+  50% { border-top: 29px solid #8300FF;border-left:29px solid #59585E;border-right:29px solid #59585E; }
+  60% { border-top:29px solid  #0030FF;border-left:29px solid #59585E;border-right:29px solid #59585E; }
+  70%{ border-top: 29px solid #000BFF;border-left:29px solid #59585E;border-right:29px solid #59585E; }
+  80%  { border-top:29px solid  #00FFD8;border-left:29px solid #59585E;border-right:29px solid #59585E; }
+  90% { border-top:29px solid  #1EFF00;border-left:29px solid #59585E;border-right:29px solid #59585E; }
+  100% { border-top:29px solid  #FF9000;border-left:29px solid #59585E;border-right:29px solid #59585E; }
 
 }

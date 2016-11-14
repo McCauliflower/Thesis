@@ -17,12 +17,9 @@
 		<link rel="stylesheet" type="text/css" href="pentagon.css"/>
 		<link rel="stylesheet" type="text/css" href="hexagon.css"/>
 		<link rel="stylesheet" type="text/css" href="octagon.css"/>
-
-
-
 		<link rel="stylesheet" type="text/css" href="circle.css"/>
 
-		<script src="jQuery/jquery.js"></script>
+		<script src="jQuery.js"></script>
 </head>
 <body>
 
@@ -42,6 +39,26 @@ body{
   width: 800px;
   margin-left: calc(50% - 400px);
 }
+
+@keyframes slide{
+ 0%{margin-bottom:0%;}
+ 50%{margin-bottom:50%}
+ 1000%{margin-bottom:0%}
+}
+
+@-webkit-keyframes slide{
+	0%{margin-bottom:0%;}
+  50%{margin-bottom:50%}
+  1000%{margin-bottom:0%}
+}
+
+
+@-moz-keyframes slide{
+	0%{margin-bottom:0%;}
+	50%{margin-bottom:50%}
+	1000%{margin-bottom:0%}
+}
+
 
 </style>
 <!--This website was hand-coded using html, css, and javascript! :) Thanks for looking! Please visit http://www.artbypristique.com/-->
@@ -75,6 +92,36 @@ body{
 
 </div><!--end footer-->
 </div><!--end "wrapper"-->
+
+<script>
+
+
+/*
+$( "#triangle").click(function() {
+	$( this ).css({"transform":"scale(2)", "-webkit-transform": "scale(2)"});
+});
+
+$( "#triangle" ).click(function() {
+	$( this ).css({"-webkit-animation":"slide 5s infinite alternate !important", "animation": "slide 5s infinite alternate !important"});
+});
+$( "#square" ).click(function() {
+	$( this ).css({"-webkit-animation":"slide 5s infinite alternate !important", "animation": "slide 5s infinite alternate !important"});
+});
+$( "#pentagon" ).click(function() {
+	$( this ).css({"-webkit-animation":"slide 5s infinite alternate !important", "animation": "slide 5s infinite alternate !important"});
+});
+$( "#hexagon" ).click(function() {
+	$( this ).css({"-webkit-animation":"slide 5s infinite alternate !important", "animation": "slide 5s infinite alternate !important"});
+});
+$( "#octagon" ).click(function() {
+	$( this ).css({"-webkit-animation":"slide 5s infinite alternate !important", "animation": "slide 5s infinite alternate !important"});
+});
+$( "#circle" ).click(function() {
+	$( this ).css({"-webkit-animation":"slide 5s infinite alternate !important", "animation": "slide 5s infinite alternate !important"});
+});
+
+*/
+</script>
 
 </body>
 </html>
