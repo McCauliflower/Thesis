@@ -1,0 +1,50 @@
+body {
+  background-color: #180914;
+  background-image: url("../images/background-images/space.jpg") !important;
+  background-size: cover !important;
+  background-repeat: no-repeat; }
+
+#mainPhoto {
+  position: absolute;
+  bottom: 0px;
+  width: 800px;
+  height: 560px;
+  margin-left: calc(50% - 400px); }
+
+#leftTriangle {
+  opacity: .4;
+  position: absolute;
+  height: 0;
+  width: 0px;
+  bottom: 540px;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid red;
+  z-index: 99;
+  transition: all 2s ease;
+  animation: rotation 10s infinite, triangleAnimation 10s infinite;
+  left: calc(50% - 345px); }
+  #leftTriangle:hover {
+    animation: rotationHover 1s infinite alternate, triangleAnimation 10s infinite;
+    opacity: 1;
+    border-bottom: 100px solid white; }
+
+#rightTriangle {
+  opacity: .4;
+  position: absolute;
+  height: 0;
+  width: 0px;
+  bottom: 540px;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid red;
+  z-index: 99;
+  transition: all 2s ease;
+  animation: rotation 10s infinite, triangleAnimation 10s infinite;
+  right: calc(50% - 345px); }
+  #rightTriangle:hover {
+    animation: rotationHover 1s infinite alternate, triangleAnimation 10s infinite;
+    opacity: 1;
+    border-bottom: 100px solid white; }
+
+/*# sourceMappingURL=thesis.css.map */
