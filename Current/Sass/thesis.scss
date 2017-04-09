@@ -1,4 +1,5 @@
 
+
 $baseColor: #dbd0c5;
 $leftMargin: calc(50% - 400px);
 $border: 50px solid transparent;
@@ -68,6 +69,10 @@ body{
 }
 
 
+#reset{
+	opacity:.8em;
+	margin-left:46%;
+}
 
 
 
@@ -108,46 +113,64 @@ body{
 		transition:all .7s ease;
 }
 
+.activatedPyramid{
+	height:120% !important;
+}
+
 #leftPyramid > div:first-child, #rightPyramid > div:first-child {
-    border-color: transparent transparent transparent red;
+    border-color: transparent transparent transparent #f5a919 /*magenta*/;
     transform: rotateY(-19.5deg) rotateX(180deg) translateY(-100px);
 		opacity:.5 !important;
+		transition:all .7s ease;
 }
 
 #leftPyramid > div:nth-child(2),#rightPyramid > div:nth-child(2)  {
-    border-color: transparent transparent transparent green;
+    border-color: transparent transparent transparent #3901bd /*purple */ ;
     transform: rotateY(90deg) rotateZ(60deg) rotateX(180deg) translateY(-100px);
 		opacity:.5 !important;
+		transition:all .7s ease;
 }
 
 #leftPyramid > div:nth-child(3), #rightPyramid > div:nth-child(3)  {
-    border-color: transparent transparent transparent blue;
+    border-color: transparent transparent transparent #1ef237 /*bright green*/;
     transform: rotateX(60deg) rotateY(19.5deg);
 		opacity:.5 !important;
+		transition:all .7s ease;
 }
 
 #leftPyramid > div:nth-child(4), #rightPyramid > div:nth-child(4) {
-    border-color: transparent transparent transparent rgba(100, 0, 0, 0.4);
+    border-color: transparent transparent transparent rgba(250, 250, 250, 0.2) /*bright yellow*/;
     transform: rotateX(-60deg) rotateY(19.5deg) translateX(-29px) translateY(-50px) translateZ(81.5px);
+		transition:all .7s ease;
 }
 
-
+/*
 .explode{
-	transform: translateY(0px) !important;
+	transform: translateY(100px) !important;
 }
-
+*/
 
 /******************      CUBES       ********************/
 
+$baseHeight: 75px;
+$baseWidth: 75px;
 
-
-
-
+.sizeActivated{
+  height: $baseHeight + 75 !important;
+	width: $baseWidth + 75 !important;
+}
+.sizeDeactived{
+	height: $baseHeight - 75 !important;
+	width: $baseWidth - 75 !important;
+}
+.sizeActivated .front{
+  transform: translateZ(50px);
+}
 
 #leftCubeContainer, #rightCubeContainer{
 	z-index:99;
 	direction: ltr;
-
+	transition: all 1s ease-in;
 }
 
 .leftWrap, .rightWrap{
@@ -166,9 +189,11 @@ body{
 .leftCube, .rightCube  {
 		margin: auto;
 		position: relative;
-		height: 75px;
-		width: 75px;
+		height: $baseHeight;
+		width: $baseWidth;
 		transform-style: preserve-3d;
+		transition: all .4s ease-in;
+
 }
 .leftCube{
 	left:calc(50% - 200px;)
@@ -188,13 +213,14 @@ body{
 				border: solid 1px #eee;
 				color: #fff;
 				font: 10px arial;
-				transition: transform 0.2s ease-in;
+				transition: transform 0.4s ease-in;
 		}
 
 .front {
 		transform: translateZ(-25px);
 		opacity:.6 !important;
 		background-color:red !important;
+		transition: transform 0.4s ease-in;
 }
 .back {
 		transform: translateZ(-100px) rotateY(180deg);
@@ -205,13 +231,13 @@ body{
 		transform: rotateY(-270deg) translateX(100px);
 		transform-origin: top right;
 		opacity:.6 !important;
-		background-color:green !important;
+		background-color:#03ffee /*neon blue */ !important;
 }
 .left {
 		transform: rotateY(270deg) translateX(-100px);
 		transform-origin: center left;
 		opacity:.6 !important;
-		background-color:green !important;
+		background-color:#29ff23 /*bright green*/ !important;
 
 }
 .top {
@@ -264,6 +290,9 @@ body{
 
 
 
+.sizeActivated:hover .front{
+    transform: translateZ(100px) !important;
+}
 
 
 
@@ -309,7 +338,7 @@ body {
   width:100%;
   height:100%;
   transform: rotateX(45deg) rotateY(45deg);
-	transform-style: preserve-3d;
+	transform-style: preserve-3d !important;
 }
 .ball {
   position: relative;
@@ -333,9 +362,14 @@ body {
   animation: show 0.75s forwards ease-in-out;
   transition: .5s all ease-in;
 	clip-path: circle(50%);
+	opacity:.3;
 }
-.changeHeight{
+.changeHeight1{
   height:5% !important;
+}
+.changeHeight2{
+  height:200% !important;
+	width:200% !important;
 }
 .sliceHover{
   border-style:solid !important;

@@ -21,6 +21,7 @@
 <![endif]-->
 <div id="wrapper">
 <div id="content">
+	<div id="button"><button id="reset">RESET</button></div>
 	<div class="perspective">
 		 <section id="leftPyramid">
 				<div></div>
@@ -239,55 +240,141 @@
 
 <div id="footer">
 
-<script type="text/javascript">
+	<script type="text/javascript">
+	var leftChildren = $("#leftPyramid div:first-child, #leftPyramid div:nth-child(2),#leftPyramid > div:nth-child(3), #leftPyramid > div:nth-child(4)");
+	var rightChildren = $("#rightPyramid > div:first-child, #rightPyramid > div:nth-child(2), #rightPyramid > div:nth-child(3), #rightPyramid > div:nth-child(4)");
+	var src = ['images/figures/eye-final.png','images/figures/tatooes-final.png', 'images/figures/averagejoe-final.png', 'images/figures/suit+tie-final.png', 'images/figures/woman-final.png'];
 
-//rotate through versions of center image
-var leftChildren = $("#leftPyramid div:first-child, #leftPyramid div:nth-child(2),#leftPyramid > div:nth-child(3), #leftPyramid > div:nth-child(4)");
-var rightChildren = $("#rightPyramid > div:first-child, #rightPyramid > div:nth-child(2), #rightPyramid > div:nth-child(3), #rightPyramid > div:nth-child(4)");
-var src = ['images/figures/eye-final.png','images/figures/tatooes-final.png', 'images/figures/averagejoe-final.png', 'images/figures/suit+tie-final.png', 'images/figures/woman-final.png'];
 
-var i = 0;
-$("#mainPhoto").click(function(){
-		if(i < src.length - 1){
-         i++;
-			   console.log("Image " + i + " clicked!");
-			   $("#mainPhoto").attr('src', src[i]);
-    }else{
-         i = 0;
-				 $("#mainPhoto").attr('src', src[i]);
-         }
+		function imageRotation(){
+			//rotate through versions of center image
+
+			var i = 0;
+			$("#mainPhoto").click(function(){
+					if(i < src.length - 1){
+			         i++;
+						   console.log("Image " + i + " clicked!");
+						   $("#mainPhoto").attr('src', src[i]);
+			    }else{
+			         i = 0;
+							 $("#mainPhoto").attr('src', src[i]);
+						 };
+			});
+		};
+		//collapse and expand triangle on hover
+
+		function trianglez(){
+			var leftPyramid = $('#leftPyramid');
+			var mayanLeft = $('#leftPyramid div:nth-child(even)');
+			var mayanLeft2 = $('#leftPyramid div:nth-child(odd)');
+			var rightPyramid = $('#rightPyramid');
+			var mayanRight = $('#rightPyramid div:nth-child(even)');
+			var mayanRight2 = $('#rightPyramid div:nth-child(odd)');
+
+	     leftPyramid.on('click',
+						 function() {
+							 mayanLeft.toggleClass('activatedPyramid');
+							 mayanLeft2.toggleClass('activatedPyramid');
+							 console.log('Left Pyramid clicked');
+			 });
+			 rightPyramid.on('click',
+						function() {
+							mayanRight.toggleClass('activatedPyramid');
+							mayanRight2.toggleClass('activatedPyramid');
+							console.log('Right Pyramid clicked');
+			});
+		};
+		//toggle classes on circle to change height width and line pattern with hover and click effects
+
+		function circlez() {
+
+			var leftSlice = $('.leftCircle').find('.slice');;
+			var rightSlice = $('.rightCircle').find('.slice');
+
+			var leftBall =  $('.leftCircle') || leftSlice;
+			var rightBall =  $('.rightCircle') || rightSlice;
+
+			leftBall.hover(function(){
+				leftSlice.toggleClass('sliceHover');
+			})
+			rightBall.hover(function(){
+				rightSlice.toggleClass('sliceHover');
+			})
+
+
+			var firstClicks = 0;
+
+	      leftBall.click(function(){
+	          if(firstClicks == 0){
+							leftSlice.removeClass('changeHeight2');
+	            leftSlice.addClass('changeHeight1');
+	            firstClicks++;
+	            console.log("FIRST");
+	          }else if (firstClicks === 1){
+							leftSlice.removeClass('changeHeight2');
+	            leftSlice.addClass('changeHeight2');
+	            firstClicks++;
+	            console.log("SECOND");
+	          }else if (firstClicks === 2){
+							leftSlice.removeClass('changeHeight1');
+							leftSlice.removeClass('changeHeight2');
+							firstClicks = firstClicks - 2;
+							console.log('THIRD');
+						}
+	          console.log(firstClicks);
+	        });
+
+				var secondClicks = 0;
+
+			      rightBall.click(function(){
+			          if(secondClicks == 0){
+									rightSlice.removeClass('changeHeight2');
+			            rightSlice.addClass('changeHeight1');
+			            secondClicks++;
+			            console.log("FIRST");
+			          }else if (secondClicks === 1){
+									rightSlice.removeClass('changeHeight2');
+			            rightSlice.addClass('changeHeight2');
+			            secondClicks++;
+			            console.log("SECOND");
+			          }else if (secondClicks === 2){
+									rightSlice.removeClass('changeHeight1');
+									rightSlice.removeClass('changeHeight2');
+									secondClicks = secondClicks - 2;
+									console.log('THIRD');
+								}
+			          console.log(secondClicks);
+			        });
+
+		};
+		//toggle height and width of square on click
+
+		function cubez(){
+			var lefty = $('.leftCube').children();
+			var righty = $('.rightCube').children();
+
+			$('#rightCubeContainer').on('click', function() {
+						$('.rightCube').toggleClass('sizeActivated');
+				});
+
+				$('#leftCubeContainer').on('click', function() {
+							$('.leftCube').toggleClass('sizeActivated');
+					});
+			};
+
+$(function(){
+	imageRotation();
+	trianglez();
+	circlez();
+	cubez();
 });
-//collapse and expand triangle on hover
 
-$('#leftPyramid').hover(
-			function() {
-					leftChildren.addClass("explode");
-					console.log(this);
 
-					}, function() {
-					leftChildren.removeClass("explode");
-  		    }
-);
-$('#rightPyramid').hover(
-			function() {
-					rightChildren.addClass("explode");
-					console.log(this);
-
-					}, function() {
-					rightChildren.removeClass("explode");
-  		    }
-);
-//toggle classes on circle
-
-var ball = $('.ball');
-var slice = $('.slice');
-ball.click(function(){
-	slice.toggleClass('changeHeight');
+$('#reset').click(function() {
+    location.reload();
 });
-ball.hover(function(){
-	slice.toggleClass('sliceHover');
-})
-</script>
+
+	</script>
 
 
 </div><!--end footer-->

@@ -30,6 +30,10 @@ body {
 #rightWheel {
   right: calc(50% - 270px); }
 
+#reset {
+  opacity: .8em;
+  margin-left: 46%; }
+
 /***************    PYRAMID     *************************/
 @-webkit-keyframes spin {
   from {
@@ -78,38 +82,63 @@ body {
   -webkit-transition: all .7s ease;
           transition: all .7s ease; }
 
+.activatedPyramid {
+  height: 120% !important; }
+
 #leftPyramid > div:first-child, #rightPyramid > div:first-child {
-  border-color: transparent transparent transparent red;
+  border-color: transparent transparent transparent #f5a919;
   -webkit-transform: rotateY(-19.5deg) rotateX(180deg) translateY(-100px);
           transform: rotateY(-19.5deg) rotateX(180deg) translateY(-100px);
-  opacity: .5 !important; }
+  opacity: .5 !important;
+  -webkit-transition: all .7s ease;
+          transition: all .7s ease; }
 
 #leftPyramid > div:nth-child(2), #rightPyramid > div:nth-child(2) {
-  border-color: transparent transparent transparent green;
+  border-color: transparent transparent transparent #3901bd;
   -webkit-transform: rotateY(90deg) rotateZ(60deg) rotateX(180deg) translateY(-100px);
           transform: rotateY(90deg) rotateZ(60deg) rotateX(180deg) translateY(-100px);
-  opacity: .5 !important; }
+  opacity: .5 !important;
+  -webkit-transition: all .7s ease;
+          transition: all .7s ease; }
 
 #leftPyramid > div:nth-child(3), #rightPyramid > div:nth-child(3) {
-  border-color: transparent transparent transparent blue;
+  border-color: transparent transparent transparent #1ef237;
   -webkit-transform: rotateX(60deg) rotateY(19.5deg);
           transform: rotateX(60deg) rotateY(19.5deg);
-  opacity: .5 !important; }
+  opacity: .5 !important;
+  -webkit-transition: all .7s ease;
+          transition: all .7s ease; }
 
 #leftPyramid > div:nth-child(4), #rightPyramid > div:nth-child(4) {
-  border-color: transparent transparent transparent rgba(100, 0, 0, 0.4);
+  border-color: transparent transparent transparent rgba(250, 250, 250, 0.2);
   -webkit-transform: rotateX(-60deg) rotateY(19.5deg) translateX(-29px) translateY(-50px) translateZ(81.5px);
-          transform: rotateX(-60deg) rotateY(19.5deg) translateX(-29px) translateY(-50px) translateZ(81.5px); }
+          transform: rotateX(-60deg) rotateY(19.5deg) translateX(-29px) translateY(-50px) translateZ(81.5px);
+  -webkit-transition: all .7s ease;
+          transition: all .7s ease; }
 
-.explode {
-  -webkit-transform: translateY(0px) !important;
-      -ms-transform: translateY(0px) !important;
-          transform: translateY(0px) !important; }
-
+/*
+.explode{
+	transform: translateY(100px) !important;
+}
+*/
 /******************      CUBES       ********************/
+.sizeActivated {
+  height: 150px !important;
+  width: 150px !important; }
+
+.sizeDeactived {
+  height: 0px !important;
+  width: 0px !important; }
+
+.sizeActivated .front {
+  -webkit-transform: translateZ(50px);
+          transform: translateZ(50px); }
+
 #leftCubeContainer, #rightCubeContainer {
   z-index: 99;
-  direction: ltr; }
+  direction: ltr;
+  -webkit-transition: all 1s ease-in;
+          transition: all 1s ease-in; }
 
 .leftWrap, .rightWrap {
   z-index: 99;
@@ -130,7 +159,9 @@ body {
   height: 75px;
   width: 75px;
   -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d; }
+          transform-style: preserve-3d;
+  -webkit-transition: all .4s ease-in;
+          transition: all .4s ease-in; }
 
 .leftCube {
   left: calc(50% - 200px;); }
@@ -149,14 +180,16 @@ body {
   border: solid 1px #eee;
   color: #fff;
   font: 10px arial;
-  -webkit-transition: -webkit-transform 0.2s ease-in;
-          transition: transform 0.2s ease-in; }
+  -webkit-transition: -webkit-transform 0.4s ease-in;
+          transition: transform 0.4s ease-in; }
 
 .front {
   -webkit-transform: translateZ(-25px);
           transform: translateZ(-25px);
   opacity: .6 !important;
-  background-color: red !important; }
+  background-color: red !important;
+  -webkit-transition: -webkit-transform 0.4s ease-in;
+          transition: transform 0.4s ease-in; }
 
 .back {
   -webkit-transform: translateZ(-100px) rotateY(180deg);
@@ -171,7 +204,7 @@ body {
       -ms-transform-origin: top right;
           transform-origin: top right;
   opacity: .6 !important;
-  background-color: green !important; }
+  background-color: #03ffee !important; }
 
 .left {
   -webkit-transform: rotateY(270deg) translateX(-100px);
@@ -180,7 +213,7 @@ body {
       -ms-transform-origin: center left;
           transform-origin: center left;
   opacity: .6 !important;
-  background-color: green !important; }
+  background-color: #29ff23 !important; }
 
 .top {
   -webkit-transform: rotateX(-270deg) translateY(-100px);
@@ -243,6 +276,10 @@ body {
   -webkit-transform: rotateX(270deg) translateZ(50px) translateY(100px);
           transform: rotateX(270deg) translateZ(50px) translateY(100px); }
 
+.sizeActivated:hover .front {
+  -webkit-transform: translateZ(100px) !important;
+          transform: translateZ(100px) !important; }
+
 /******************      CIRCLE       ********************/
 @-webkit-keyframes spinning {
   to {
@@ -284,8 +321,8 @@ body {
   height: 100%;
   -webkit-transform: rotateX(45deg) rotateY(45deg);
           transform: rotateX(45deg) rotateY(45deg);
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d; }
+  -webkit-transform-style: preserve-3d !important;
+          transform-style: preserve-3d !important; }
 
 .ball {
   position: relative;
@@ -314,10 +351,15 @@ body {
   -webkit-transition: .5s all ease-in;
           transition: .5s all ease-in;
   -webkit-clip-path: circle(50%);
-          clip-path: circle(50%); }
+          clip-path: circle(50%);
+  opacity: .3; }
 
-.changeHeight {
+.changeHeight1 {
   height: 5% !important; }
+
+.changeHeight2 {
+  height: 200% !important;
+  width: 200% !important; }
 
 .sliceHover {
   border-style: solid !important;
